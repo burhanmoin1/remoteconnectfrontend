@@ -1,9 +1,11 @@
-import InitialPage from '../components/signupcomps/InitialPage';
+import Header from '../components/headercomp/Header';
+import InitialSignUpPage from '../components/signupcomps/InitialPage';
 
 export default function SignupPage() {
     return (
       <main>
-       <InitialPage/>
+        <Header/>
+       <InitialSignUpPage/>
       </main>
     );
   }
