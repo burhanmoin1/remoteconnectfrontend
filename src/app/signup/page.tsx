@@ -1,11 +1,11 @@
 import Header from '../components/headercomp/Header';
-import InitialSignUpPage from '../components/signupcomps/InitialPage';
+import FullSignupcomp from '../components/signupcomps/FullSignupcomp';
 
 export default function SignupPage() {
     return (
       <main>
         <Header/>
-       <InitialSignUpPage/>
+       <FullSignupcomp/>
       </main>
     );
   }
