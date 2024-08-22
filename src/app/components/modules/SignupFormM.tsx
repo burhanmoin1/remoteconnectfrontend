@@ -18,7 +18,6 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         last_name: '',
         password: '',
         country: '',
-        phone_number: '',
         agreed_to_terms: false,
     });
 
@@ -26,6 +25,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<boolean>(false);
     const [passwordValidationStatus, setPasswordValidationStatus] = useState('');
+    
 
     const handleFocus = (input: any) => {
         setFocusStates(prevState => ({ ...prevState, [input]: true }));
@@ -35,6 +35,27 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         setFocusStates(prevState => ({ ...prevState, [input]: false }));
         if (input === 'password') {
             setPasswordValidationStatus(passwordErrors.length === 0 ? 'valid' : 'invalid');
+        }
+    };
+
+    const [emailStatus, setEmailStatus] = useState({ exists: false, valid: false });
+
+    const handleEmailBlur = async (field: string) => {
+        setFocusStates({ ...focusStates, [field]: false });
+        if (formData.email) {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/email_validator/', {
+                    params: { email: formData.email }
+                });
+
+                if (response.status === 204) {
+                    setEmailStatus({ exists: true, valid: false });
+                } else if (response.status === 200) {
+                    setEmailStatus({ exists: false, valid: true });
+                }
+            } catch (error) {
+                console.error('Error checking email:', error);
+            }
         }
     };
 
@@ -87,6 +108,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
             setSuccess(false);
 
             try {
+                console.log('Form Data:', formData);
                 const response = await axios.post(submitUrl, formData);
 
                 if (response.status === 201) {
@@ -97,7 +119,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                 setError('An error occurred. Please try again.');
             }
 
-            console.log('Form Data:', formData);
+            
         } else {
             console.log('Password validation failed.');
         }
@@ -120,7 +142,6 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         lastName: false,
         email: false,
         password: false,
-        phoneNumbers: false
     });
 
     const [isOpen, setIsOpen] = useState(false);
@@ -190,18 +211,24 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                         value={formData.email}
                         onChange={handleChange}
                         initial={{ scale: 1, borderColor: '#D1D5DB', boxShadow: 'none' }}
-                            animate={{
+                        animate={{
                             scale: focusStates.email ? 1.02 : 1,
-                            borderColor: focusStates.email ? '#0d3281' : '#D1D5DB',
+                            borderColor: emailStatus.exists ? 'red' : (emailStatus.valid ? 'green' : '#D1D5DB'),
                             boxShadow: focusStates.email ? '0 0 4px rgba(79, 70, 229, 0.5)' : 'none',
-                            }}
-                            transition={{ duration: 0.3 }}
-                            onFocus={() => handleFocus('email')}
-                            onBlur={() => handleBlur('email')}
-                        className="mt-1 p-2 border border-gray-300 w-full outline-none"
+                        }}
+                        transition={{ duration: 0.3 }}
+                        onFocus={() => handleFocus('email')}
+                        onBlur={() => handleEmailBlur('email')}
+                        className={`mt-1 p-2 border w-full outline-none ${emailStatus.exists ? 'border-red-500' : (emailStatus.valid ? 'border-green-500' : 'border-gray-300')}`}
                         required
                     />
+                    {emailStatus.exists && (
+                        <p className="text-red-500 text-sm mt-1">
+                            Email already registered, <a href="/login" className="text-blue-500 underline">Log in?</a>
+                        </p>
+                    )}
                 </div>
+
 
                 <div className="flex flex-col">
                 <label htmlFor="password" className="block text-sm font-medium text-black">Password</label>

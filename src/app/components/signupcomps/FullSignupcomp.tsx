@@ -38,11 +38,11 @@ const FullSignupcomp = () => {
   const formProps = {
     client: {
       heading: 'Applying as a client',
-      submitUrl: 'http://localhost:8000/api/clientsignup/',
+      submitUrl: 'http://127.0.0.1:8000/api/clientsignup/',
     },
     freelancer: {
       heading: 'Applying as a freelancer',
-      submitUrl: 'http://localhost:8000/api/freelancersignup/',
+      submitUrl: 'http://127.0.0.1:8000/api/freelancersignup/',
     },
   };
 
@@ -54,11 +54,11 @@ const FullSignupcomp = () => {
     <div className="flex flex-col items-center mt-24 bg-white">
       {(clientRole || freelancerRole) && selectedRole ? (
         <div className="relative w-full max-w-md space-y-4">
-          <div className='flex flex-row lg:w-[100vmin] justify-between mt-[-58px]'>
+          <div className='flex flex-row lg:w-[80vmin] md:w-[70vmin] justify-between mt-[-58px]'>
           <img
             src={backarrow.src}
             onClick={handleBackToRoleSelection}
-            className="ml-4 lg:ml-[-210px] h-6 w-6 cursor-pointer"
+            className="ml-4 lg:ml-[-210px] md:ml-[-180px] h-6 w-6 cursor-pointer"
           />
           <div className='flex flex-row space-x-1 lg:space-x-3 mr-2'>
           <h3 className="text-sm"
@@ -76,7 +76,12 @@ const FullSignupcomp = () => {
             heading={formProps[selectedRole]?.heading}
             submitUrl={formProps[selectedRole]?.submitUrl}
           />
-          
+          <p className="mt-4 ml-[70px] md:ml-20 lg:ml-20">
+            Already have an account?{' '}
+            <Link href="/login" className="text-[#E61464]">
+              Log in
+            </Link>
+            </p>
         </div>
       ) : (
         <>

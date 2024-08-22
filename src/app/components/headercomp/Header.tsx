@@ -12,16 +12,25 @@ const Header = () => {
 
   return (
     <header className="w-full bg-white p-4 border-b-2 border-gray-200 shadow-sm">
-      <div className="container mx-auto flex items-center justify-between relative">
-        {/* Logo */}
-        <Link href="/">
-          <img 
-            src={Logo.src}
-            alt="Remote Connect Logo" 
-            className="h-8 lg:h-12 mx-auto lg:mx-0" 
-          />
+    <div className="container mx-auto flex items-center justify-between relative">
+      {/* Logo */}
+      <Link href="/">
+        <img 
+          src={Logo.src}
+          alt="Remote Connect Logo" 
+          className="h-8 lg:h-12 mx-auto lg:mx-0" 
+        />
+      </Link>
+  
+      {/* Buttons container */}
+      <div className="hidden md:flex lg:flex items-center space-x-4">
+        <Link href="/signup" className="md:px-4 md:py-2 xl:px-6 xl:py-2 bg-[#E61464] text-white rounded-md hover:bg-[#f04a8a]">
+          Sign up
         </Link>
-
+        <Link href="/login" >
+          Log in
+        </Link>
+      </div>
         {/* Hamburger Menu */}
         <div className=" md:hidden lg:hidden flex items-center">
           <button 
