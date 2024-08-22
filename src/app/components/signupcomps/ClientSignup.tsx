@@ -2,19 +2,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
-import { ClientSignupForm } from '@/app/types/common'; 
+import { SignupForm } from '@/app/types/common'; 
 import { Countrylist } from '@/app/assets/lists/common';
 import { motion, useAnimation } from 'framer-motion';
 
 const ClientSignup: React.FC = () => {
-    const [formData, setFormData] = useState<ClientSignupForm>({
+    const [formData, setFormData] = useState<SignupForm>({
         email: '',
         first_name: '',
         last_name: '',
         password: '',
         country: '',
-        phone_number: '',
-        agreed_to_terms: false,
+        agreed_to_terms: false
     });
 
     const [passwordErrors, setPasswordErrors] = useState<string[]>([]);

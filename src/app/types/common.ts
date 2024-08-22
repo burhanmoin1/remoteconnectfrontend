@@ -13,6 +13,5 @@ export interface SignupForm {
   last_name: string;
   password: string;
   country: string;
-  phone_number: string;
   agreed_to_terms: boolean;
 }

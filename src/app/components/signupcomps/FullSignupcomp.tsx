@@ -6,6 +6,7 @@ import clienticon from '@/app/assets/icons/clienticon.png';
 import freelancericon from '@/app/assets/icons/freelancericon.png';
 import SignUpRoleSelection from '../modules/SignUpRoleSelection';
 import SignupFormM from '../modules/SignupFormM';
+import backarrow from '@/app/assets/icons/icons8-back-arrow-96.png';
 
 const FullSignupcomp = () => {
   const [selectedRole, setSelectedRole] = useState<'client' | 'freelancer' | ''>('');
@@ -52,30 +53,30 @@ const FullSignupcomp = () => {
   return (
     <div className="flex flex-col items-center mt-24 bg-white">
       {(clientRole || freelancerRole) && selectedRole ? (
-        <div className="w-full max-w-md lg:space-y-12 space-y-8">
+        <div className="relative w-full max-w-md space-y-4">
+          <div className='flex flex-row lg:w-[100vmin] justify-between mt-[-58px]'>
+          <img
+            src={backarrow.src}
+            onClick={handleBackToRoleSelection}
+            className="ml-4 lg:ml-[-210px] h-6 w-6 cursor-pointer"
+          />
+          <div className='flex flex-row space-x-1 lg:space-x-3 mr-2'>
+          <h3 className="text-sm"
+          >{selectedRole === 'client' ? 'Need work?' : 'Require talent?'}</h3>
+            <h3
+              onClick={handleFormToggle}
+              className="text-sm text-[#E61464] hover:cursor-pointer"
+            >
+            {selectedRole === 'client' ? 'Apply as a freelancer' : 'Apply as a client'}
+            </h3>
+            </div>
+         
+          </div>
           <SignupFormM
             heading={formProps[selectedRole]?.heading}
             submitUrl={formProps[selectedRole]?.submitUrl}
           />
-          <div className='flex flex-row lg:w-[120vmin] space-x-12 lg:space-x-28'>
-          <button
-            onClick={handleBackToRoleSelection}
-            className="lg:ml-[-24px] ml-1 text-[.78rem] lg:text-sm text-red-600 "
-          >
-           &#x2190; Back to role selection
-          </button>
-          <div className='flex flex-row space-x-1 lg:space-x-3'>
-          <h3 className="text-[.78rem] lg:text-sm"
-          >{selectedRole === 'client' ? 'Need work?' : 'Require talent?'}</h3>
-            <button
-              onClick={handleFormToggle}
-              className="text-[.76rem] lg:text-sm text-[#E61464]"
-            >
-            {selectedRole === 'client' ? 'Apply as a freelancer' : 'Apply as a client'}
-            </button>
-            </div>
-         
-          </div>
+          
         </div>
       ) : (
         <>

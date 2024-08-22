@@ -123,6 +123,8 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         phoneNumbers: false
     });
 
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className="flex flex-col items-center max-w-md mx-auto ">
             <h2 className="text-2xl font-bold mb-6">{heading}</h2>
@@ -234,43 +236,46 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                 </div>
             </div>
 
-                <div className="flex flex-col">
-                    <label htmlFor="country" className="text-sm font-medium text-black">
-                        Country
-                    </label>
-                    <Select
-                        id="country"
-                        options={countryOptions}
-                        onChange={handleSelectChange}
-                        className="mt-1"
-                        required
-                    />
-                </div>
-
-                <div className="flex flex-col">
-                    <label htmlFor="phone_number" className="text-sm font-medium text-black">
-                        Phone Number
-                    </label>
-                    <motion.input
-                        type="tel"
-                        id="phone_number"
-                        name="phone_number"
-                        initial={{ scale: 1, borderColor: '#D1D5DB', boxShadow: 'none' }}
-                            animate={{
-                            scale: focusStates.phoneNumbers ? 1.02 : 1,
-                            borderColor: focusStates.phoneNumbers ? '#0d3281' : '#D1D5DB',
-                            boxShadow: focusStates.phoneNumbers ? '0 0 4px rgba(79, 70, 229, 0.5)' : 'none',
-                            }}
-                            transition={{ duration: 0.3 }}
-                            onFocus={() => handleFocus('phoneNumbers')}
-                            onBlur={() => handleBlur('phoneNumbers')}
-                        value={formData.phone_number}
-                        onChange={handleChange}
-                        className="mt-1 p-2 border border-gray-300 w-full outline-none"
-                        required
-                    />
-                </div>
-
+            <div className="flex flex-col">
+                <label htmlFor="country" className="text-sm font-medium text-black">
+                    Country
+                </label>
+                <Select
+                    id="country"
+                    name="country"
+                    value={countryOptions.find(option => option.value === formData.country)}
+                    onChange={handleSelectChange}
+                    options={countryOptions}
+                    placeholder="Select your country"
+                    className="mt-1 custom-select outline-none"
+                    onMenuOpen={() => setIsOpen(true)}
+                    onMenuClose={() => setIsOpen(false)}
+                    styles={{
+                        control: (provided) => ({
+                            ...provided,
+                            height: '3rem', // Adjust height as needed
+                        }),
+                        singleValue: (provided) => ({
+                            ...provided,
+                            lineHeight: '3rem', // Align text vertically
+                        }),
+                        placeholder: (provided) => ({
+                            ...provided,
+                            lineHeight: '3rem', // Align placeholder text vertically
+                        }),
+                        indicatorSeparator: () => ({}), // Hide the separator
+                        indicatorsContainer: (provided) => ({
+                            ...provided,
+                            position: 'relative',
+                        }),
+                        dropdownIndicator: (provided) => ({
+                            ...provided,
+                            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                            transition: 'transform 0.2s ease',
+                        }),
+                    }}
+                />
+            </div>
                 <div className="flex items-center">
                     <input
                         type="checkbox"
@@ -278,10 +283,10 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                         name="agreed_to_terms"
                         checked={formData.agreed_to_terms}
                         onChange={handleChange}
-                        className="mr-2 lg:mr-3 w-8 h-10 lg:w-6 lg:h-6"
+                        className="mr-2 w-6 h-6"
                         required
                     />
-                    <label htmlFor="agreed_to_terms" className="lg:mt-0 text-[0.75rem] lg:text-sm text-black lg:max-w-full"><span className='text-md'>
+                    <label htmlFor="agreed_to_terms" className="lg:mt-0 text-sm text-black lg:max-w-full"><span className='text-md'>
                         Yes, I understand and agree to the <a href='/legal' className="text-blue-600 hover:underline">Remoteconnect Terms of Service</a> and <a href='/legal#privacy' className="text-blue-600 hover:underline">Privacy Policy</a>.</span>
                     </label>
                 </div>
