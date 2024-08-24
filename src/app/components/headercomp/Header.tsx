@@ -12,27 +12,38 @@ const Header = () => {
 
   return (
     <header className="w-full bg-white p-4 border-b-2 border-gray-200 shadow-sm">
-    <div className="container mx-auto flex items-center justify-between relative">
-      {/* Logo */}
-      <Link href="/">
-        <img 
-          src={Logo.src}
-          alt="Remote Connect Logo" 
-          className="h-8 lg:h-12 mx-auto lg:mx-0" 
-        />
-      </Link>
-  
-      {/* Buttons container */}
-      <div className="hidden md:flex lg:flex items-center space-x-4">
-        <Link href="/signup" className="md:px-4 md:py-2 xl:px-6 xl:py-2 bg-[#E61464] text-white rounded-md hover:bg-[#f04a8a]">
-          Sign up
+      <div className="container flex items-center justify-between relative">
+        {/* Logo */}
+        <Link href="/">
+          <img 
+            src={Logo.src}
+            alt="Remote Connect Logo" 
+            className="h-8 lg:h-12 mx-auto lg:mx-40" 
+          />
         </Link>
-        <Link href="/login" >
-          Log in
-        </Link>
-      </div>
+
+        {/* Centered Home Link */}
+        <div className="hidden md:flex lg:flex lg:absolute text-lg left-1/3 transform mt-4 -translate-x-1/2 space-x-8">
+          <Link href="/" className="text-center hover:text-[#E61464]">
+            <p>Home</p>
+          </Link>
+          <Link href="/tos" className="text-center hover:text-[#E61464]">
+            <p>Tos</p>
+          </Link>
+        </div>
+
+        {/* Buttons container */}
+        <div className="hidden md:flex lg:flex items-center space-x-4 absolute right-0">
+          <Link href="/signup" className="md:px-4 md:py-2 xl:px-6 xl:py-2 bg-[#E61464] text-white rounded-md hover:bg-[#f04a8a]">
+            Sign up
+          </Link>
+          <Link href="/login" >
+            Log in
+          </Link>
+        </div>
+
         {/* Hamburger Menu */}
-        <div className=" md:hidden lg:hidden flex items-center">
+        <div className="md:hidden lg:hidden flex items-center">
           <button 
             onClick={toggleMenu} 
             className="relative w-6 h-4 flex flex-col justify-between items-center"

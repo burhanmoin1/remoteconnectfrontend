@@ -1,7 +1,9 @@
 import Header from "../components/headercomp/Header";
+import TosAccordion from "../components/legalcomps/TosAccordion";
 
 export default function Legalpage() {
     return (
-        <Header />
+
+        <main><Header /><TosAccordion /></main>
     );
 }

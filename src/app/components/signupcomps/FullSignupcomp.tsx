@@ -51,7 +51,7 @@ const FullSignupcomp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-24 bg-white">
+    <div className="flex flex-col items-center mt-14 bg-white">
       {(clientRole || freelancerRole) && selectedRole ? (
         <div className="relative w-full max-w-md space-y-4">
           <div className='flex flex-row lg:w-[80vmin] md:w-[70vmin] justify-between mt-[-58px]'>
@@ -85,7 +85,7 @@ const FullSignupcomp = () => {
         </div>
       ) : (
         <>
-          <h1 className="text-2xl lg:text-2xl text-center font-semibold text-black mb-8">
+          <h1 className="text-2xl text-center font-semibold text-black mb-8">
             Please choose the option that best represents you:
           </h1>
           <div className="flex flex-col md:flex-row md:space-y-0 md:space-x-8 lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 mb-6">

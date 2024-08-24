@@ -314,7 +314,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                         required
                     />
                     <label htmlFor="agreed_to_terms" className="lg:mt-0 text-sm text-black lg:max-w-full"><span className='text-md'>
-                        Yes, I understand and agree to the <a href='/legal' className="text-blue-600 hover:underline">Remoteconnect Terms of Service</a> and <a href='/legal#privacy' className="text-blue-600 hover:underline">Privacy Policy</a>.</span>
+                        Yes, I understand and agree to the <a href='/tos' className="text-blue-600 hover:underline">Remoteconnect Terms of Service</a> and <a href='/legal#privacy' className="text-blue-600 hover:underline">Privacy Policy</a>.</span>
                     </label>
                 </div>
                 <div className="flex justify-center">

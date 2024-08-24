@@ -247,3 +247,25 @@ export const Countrylist = [
     { id: 247, alphacode: 'ZM', Country: 'Zambia' },
     { id: 248, alphacode: 'ZW', Country: 'Zimbabwe' }
 ];
+
+export const TosList = [
+    {
+      id: 1,
+      title: 'Acceptance and Modification of Terms',
+      content: `a. Acceptance of Terms
+  Our websites and apps are provided to you subject to these Terms. These Terms constitute a binding agreement between you and RemoteConnect. By accessing or using our websites and apps, you agree to accept and be bound by these Terms.
+  
+  b. Changes to Terms
+  We may update these Terms periodically to reflect changes in our services or legal requirements. The updated version will apply to you, and the current Terms will be accessible through our websites and apps.
+  
+  c. Notification of Modifications
+  If we believe that the updates to these Terms will have a significant impact on you, we will notify you through our websites and/or apps at least 30 days before the changes are implemented.
+  
+  d. Continuation of Use
+  If you disagree with any version of the Terms, please stop using our websites and apps. By continuing to use them after changes are implemented, you agree to the revised Terms.
+  
+  e. Conflicting Agreements
+  Your use of our services (including our websites and apps) may be subject to additional agreements with RemoteConnect. If there is a conflict between these Terms and any other agreements, the terms of the additional agreements will take precedence.`
+    }
+    // Add more TOS items as needed
+  ];
