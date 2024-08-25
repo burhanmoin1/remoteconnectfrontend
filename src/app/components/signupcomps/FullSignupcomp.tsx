@@ -51,7 +51,7 @@ const FullSignupcomp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-14 bg-white">
+    <div className="flex flex-col items-center mt-20 bg-white">
       {(clientRole || freelancerRole) && selectedRole ? (
         <div className="relative w-full max-w-md space-y-4">
           <div className='flex flex-row lg:w-[80vmin] md:w-[70vmin] justify-between mt-[-58px]'>
@@ -76,12 +76,14 @@ const FullSignupcomp = () => {
             heading={formProps[selectedRole]?.heading}
             submitUrl={formProps[selectedRole]?.submitUrl}
           />
-          <p className="mt-4 ml-[70px] md:ml-20 lg:ml-20">
+          <div className="flex justify-center mt-4">
+          <p>
             Already have an account?{' '}
             <Link href="/login" className="text-[#E61464]">
               Log in
             </Link>
-            </p>
+          </p>
+        </div>
         </div>
       ) : (
         <>

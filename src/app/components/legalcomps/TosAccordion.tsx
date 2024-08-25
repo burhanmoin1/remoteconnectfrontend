@@ -19,20 +19,20 @@ const TosAccordion: React.FC = () => {
           behavior: 'smooth',
           block: 'start',
         });
-      }, 300); // Delay to allow animation
+      }, 200); // Delay to allow animation
     }
   };
 
   return (
-    <div className="flex flex-col lg:w-[80%] lg:ml-40 lg:m-10 h-[100vh] space-y-4">
+    <div className="flex flex-col lg:w-[80%] lg:ml-40 lg:m-10 space-y-4">
       <div className='m-2 xl:m-0 lg:m-0 md:m-4 sm:m-0'>
-        <h2 className='font-bold text-2xl'>Remoteconnect Terms of Service</h2>
+        <h2 className='font-bold text-4xl'>Remoteconnect Terms of Service</h2>
         <p className='font-bold italic text-xs'>Updated August 2024</p>
-        <p className='text-sm mt-4'>
-          <span className='font-bold'>These Terms of Service</span> (these "Terms") govern your use of the RemoteConnect website or apps (collectively, “our websites and apps”), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, “you” or “user” refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps. These Terms are effective as of the date they are published on our websites and apps.
+        <p className='text-lg mt-4 lg:w-[88%]'>
+          <span className='font-bold'>These Terms of Service</span> (these "Terms") govern your use of the Remoteconnect website or apps (collectively, “our websites and apps”), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, “you” or “user” refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps. These Terms are effective as of the date they are published on our websites and apps.
         </p>
       </div>
-      <div className="lg:space-y-2 space-y-4">
+      <div>
         {/* Section 1 */}
         <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[1] = el; }}>
           <button
@@ -45,7 +45,7 @@ const TosAccordion: React.FC = () => {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: activeIndex === 1 ? 'auto' : 0, opacity: activeIndex === 1 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             <div className="p-4">
@@ -58,16 +58,16 @@ const TosAccordion: React.FC = () => {
                 We may update these Terms periodically to reflect changes in our services or legal requirements. The updated version will apply to you, and the current Terms will be accessible through our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong>c. Notification of Modifications</strong><br />
-                If we believe that the updates to these Terms will have a significant impact on you, we will notify you through our websites and/or apps at least 30 days before the changes are implemented.
+                <strong>c. Notification of said changes</strong><br />
+                If we believe that the updates to these Terms are to impact you, we will notify you through our websites and or via email before the changes are implemented.
               </p>
               <p className="text-base mb-4">
                 <strong>d. Continuation of Use</strong><br />
-                If you disagree with any version of the Terms, please stop using our websites and apps.
+                If you disagree with any version of the Terms, you can discontinue the usage of our websites and apps.
               </p>
               <p className="text-base mb-4">
                 <strong>e. Conflicting Agreements</strong><br />
-                Your use of our services may be subject to additional agreements with RemoteConnect. If there is a conflict between these Terms and any other agreements, the terms of the additional agreements will take precedence.
+                When you use RemoteConnect or related service, such as our websites and apps, there might be additional terms or agreements that apply to specific features or services. If there is any disagreement or conflict between these general Terms of Service and any additional terms or agreements, the terms in the additional agreements will take priority.
               </p>
             </div>
           </motion.div>
@@ -85,7 +85,7 @@ const TosAccordion: React.FC = () => {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: activeIndex === 2 ? 'auto' : 0, opacity: activeIndex === 2 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             <div className="p-4">
@@ -125,7 +125,7 @@ const TosAccordion: React.FC = () => {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: activeIndex === 3 ? 'auto' : 0, opacity: activeIndex === 3 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             <div className="p-4">
@@ -165,7 +165,7 @@ const TosAccordion: React.FC = () => {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: activeIndex === 4 ? 'auto' : 0, opacity: activeIndex === 4 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             <div className="p-4">
@@ -197,7 +197,7 @@ const TosAccordion: React.FC = () => {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: activeIndex === 5 ? 'auto' : 0, opacity: activeIndex === 5 ? 1 : 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
             <div className="p-4">
