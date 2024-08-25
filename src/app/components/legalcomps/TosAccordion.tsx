@@ -1,6 +1,8 @@
 'use client';
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+import AccordionItem from '../modules/AccordionModule';
+
 
 const TosAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -33,22 +35,11 @@ const TosAccordion: React.FC = () => {
         </p>
       </div>
       <div>
-        {/* Section 1 */}
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[1] = el; }}>
-          <button
-            onClick={() => toggleAccordion(1)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            1. Acceptance and Modification of Terms
-            <span>{activeIndex === 1 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 1 ? 'auto' : 0, opacity: activeIndex === 1 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+      <AccordionItem
+        index={1}
+        title="1. Acceptance and Modification of Terms"
+        content={(
+          <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Acceptance of Terms</strong><br /><br/>
                 Our websites and apps are provided to you subject to these Terms. These Terms constitute a binding agreement between you and Remoteconnect. By accessing or using our websites and apps, you agree to accept and be bound by these Terms.
@@ -69,26 +60,17 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>E. Conflicting Agreements</strong><br /><br/>
                 When you use Remoteconnect or related service, such as our websites and apps, there might be additional terms or agreements that apply to specific features or services. If there is any disagreement or conflict between these general Terms of Service and any additional terms or agreements, the terms in the additional agreements will take priority.
               </p>
-            </div>
-          </motion.div>
-        </div>
+            </>
+        )}
+        isActive={activeIndex === 1}
+        onToggle={toggleAccordion}
+      />
 
-        {/* Section 2 */}
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[2] = el; }}>
-          <button
-            onClick={() => toggleAccordion(2)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            2. Registration
-            <span>{activeIndex === 2 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 2 ? 'auto' : 0, opacity: activeIndex === 2 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+    <AccordionItem
+            index={2}
+            title="2. Registration"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Eligibility for Registration</strong><br /><br/>
                 To register an account on Remoteconnect, you must have the legal capacity to enter into a binding contract under the laws of your country of residence. This typically means you must be of legal age (usually 18 years or older) and possess the mental capacity to agree to these terms and enter into contracts.
@@ -117,26 +99,17 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>G. Account Suspension or Termination</strong><br /><br/>
                 We reserve the right to suspend or terminate your account if we believe that you have violated these Terms or if we need to enforce compliance with our policies.
               </p>
-            </div>
-          </motion.div>
-        </div>
+              </>
+        )}
+        isActive={activeIndex === 2}
+        onToggle={toggleAccordion}
+      />
 
-        {/* Section 3 */}
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[3] = el; }}>
-          <button
-            onClick={() => toggleAccordion(3)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            3. Passwords and Security
-            <span>{activeIndex === 3 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 3 ? 'auto' : 0, opacity: activeIndex === 3 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+      <AccordionItem
+            index={3}
+            title="3. Passwords and Security"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Password and Login Details</strong><br /><br/>
                 When you register an account through our websites and apps, you will be required to create a password. To prevent fraud, you must keep your Login Details confidential and not disclose them to anyone. You agree to notify us immediately of any unauthorized use of your Login Details or any other security breaches.
@@ -157,26 +130,17 @@ const TosAccordion: React.FC = () => {
                 <li>You will be liable for all resulting direct losses or damages incurred by both you and us.</li>
                 <li>You will indemnify us fully for any loss or damage resulting from the compromise of your Login Details, except where such loss or damage is directly attributable to our actions.</li>
               </ul>
-            </div>
-          </motion.div>
-        </div>
+              </>
+        )}
+        isActive={activeIndex === 3}
+        onToggle={toggleAccordion}
+      />
 
-        {/* Section 4 */}
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[4] = el; }}>
-          <button
-            onClick={() => toggleAccordion(4)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            4. Intellectual Property
-            <span>{activeIndex === 4 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 4 ? 'auto' : 0, opacity: activeIndex === 4 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+      <AccordionItem
+            index={4}
+            title="4. Intellectual Property"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Intellectual Property Rights</strong><br /><br/>
                 Remoteconnect owns all intellectual property rights associated with our websites and apps. Unless stated otherwise, Remoteconnect retains all intellectual property rights in our websites and apps.
@@ -197,26 +161,17 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>E. Submission of Ideas and Feedback</strong><br /><br/>
                 We welcome your ideas and feedback regarding our websites and apps. By submitting materials or information (including suggestions for new or improved products and services) to public areas of our websites and apps (such as bulletin boards, forums, and newsgroups) or directly to us (e.g., via email), you agree that we may reproduce, distribute, transmit, create derivative works of, and publicly display such submissions. You acknowledge that you will not receive compensation for your ideas or feedback, even if we incorporate them into our websites and apps (including products and services). If required by law, you agree to formally transfer any intellectual property or other rights in your ideas and feedback to us for nominal consideration.
               </p>
-            </div>
-          </motion.div>
-        </div>
+            </>
+        )}
+        isActive={activeIndex === 4}
+        onToggle={toggleAccordion}
+      />
 
-        {/* Section 5 */}
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[5] = el; }}>
-          <button
-            onClick={() => toggleAccordion(5)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            5. Overview of main terms and their uses
-            <span>{activeIndex === 5 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 5 ? 'auto' : 0, opacity: activeIndex === 5 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+    <AccordionItem
+            index={5}
+            title="5. Overview of main terms and their uses"
+            content={(
+              <>
               <h3 className="mb-4 text-xl">
                 <strong>5.1 Key terms</strong><br />
               </h3>
@@ -541,87 +496,79 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>I. Amendments to Terms of Service</strong>
               </p>
                 <p><strong>Updates:</strong> Remoteconnect may update these TOS from time to time. You will be notified of any changes 30 days before they take effect. Continued use of the platform after the changes take effect will signify your acceptance of the revised TOS.
-                </p><br/>
-            </div>
-          </motion.div>
-          <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[6] = el; }}>
-          <button
-            onClick={() => toggleAccordion(6)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            6. Payments
-            <span>{activeIndex === 6 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 6 ? 'auto' : 0, opacity: activeIndex === 6 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
-              <p className="text-base mb-4">
-                <strong className='text-lg'>A. Payment Methods</strong><br /><br/>
-                Clients on Remoteconnect can make payments using the following methods:
-              </p>
-              <li>
-                Payoneer
-              </li>
-              <li>
-              Bank Transfer
-              </li>
-              <li>
-              Credit Card
-              </li><br/>
-              <p className="text-base mb-4">
-                <strong className='text-lg'>B. Payment Processing</strong><br /><br/>
-                All payments made by Clients for services rendered by Freelancers will first be processed through Remoteconnect. The platform will deduct its applicable service fees before transferring the remaining funds to the Freelancer.
-              </p>
-              <p className="text-base mb-4">
-                <strong className='text-lg'>C. Payment Frequency</strong><br /><br/>
-                <p><strong>Termination:</strong> Either party may terminate the contract in accordance with the terms specified. If a contract is terminated, both parties must fulfil any outstanding obligations and resolve any active disputes.
-                </p><br/>
-                <p><strong>Suspension:</strong>  Remoteconnect reserves the right to suspend or terminate contracts if either party violates these TOS or engages in behaviour that is harmful to the platform or its users.
                 </p>
-              </p>
-              <p className="text-base mb-4">
-                <strong className='text-lg'>D. Verified Payment Methods</strong><br /><br/>
-                <p><strong>For Clients:</strong> Clients must have a verified payment method before they are allowed to post jobs on Remoteconnect. This verification ensures that the Client has the necessary means to compensate Freelancers for their work.
-                </p><br/>
-                <p><strong>For Freelancers:</strong>  Freelancers must have a verified payment receiving method (e.g., a Payoneer account or another supported account) before they can accept jobs. This verification is necessary to ensure that Freelancers can receive payments securely.
-                </p>
+                </>
+        )}
+        isActive={activeIndex === 5}
+        onToggle={toggleAccordion}
+      />
+         <AccordionItem
+            index={6}
+            title="6. Payments"
+            content={(
+              <>
+           <p className="text-base mb-4">
+              <strong className='text-lg'>A. Payment Methods</strong><br /><br/>
+              Clients on Remoteconnect can make payments using the following methods:
+            </p>
+            <ul>
+              <li>Payoneer</li>
+              <li>Bank Transfer</li>
+              <li>Credit Card</li>
+            </ul><br/>
 
-              </p>
-              <p className="text-base mb-4">
-                <strong className='text-lg'>E. Secure Transfer Methods</strong><br /><br/>
-                Remoteconnect uses secure methods for all financial transactions, including Payoneer API and Square API, to process payments. This ensures that all payments are handled safely and securely, providing peace of mind for both Clients and Freelancers.
-              </p>
-              <p className="text-base mb-4">
-                <strong className='text-lg'>F. Dispute Resolution and Fund Holding</strong><br /><br/>
-                <p><strong>Fund Holding:</strong> Remoteconnect will hold funds for twenty-four (24) hours after receiving a payment to allow the Client time to open a dispute if necessary.
-                </p><br/>
-                <p><strong>Dispute Resolution:</strong>  If a Client wishes to open a dispute within this 48-hour window, Remoteconnect will hold the funds and assist in resolving the issue. If no dispute is raised within this period, the payment will be released to the Freelancer.
-                </p><br/>
-                <p><strong>Refunds:</strong>  If a dispute is opened and resolved in favour of the Client, a refund may be issued. If no dispute is opened within the 48-hour window, the payment will be finalised, and no refunds will be processed.
-                </p>
-              </p>
+            <p className="text-base mb-4">
+              <strong className='text-lg'>B. Payment Processing</strong><br /><br/>
+              All payments made by Clients for services rendered by Freelancers will first be processed through Remoteconnect. The platform will deduct its applicable service fees before transferring the remaining funds to the Freelancer.
+            </p>
+
+            <p className="text-base mb-4">
+              <strong className='text-lg'>C. Payment Frequency</strong><br /><br/>
+            </p>
+            <div className="text-base mb-4">
+              <strong>Termination:</strong> Either party may terminate the contract in accordance with the terms specified. If a contract is terminated, both parties must fulfil any outstanding obligations and resolve any active disputes.
             </div>
-          </motion.div>
-        </div>
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[7] = el; }}>
-          <button
-            onClick={() => toggleAccordion(7)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            7. Communication and Platform Integrity
-            <span>{activeIndex === 7 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 7 ? 'auto' : 0, opacity: activeIndex === 7 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+            <div className="text-base mb-4">
+              <strong>Suspension:</strong> Remoteconnect reserves the right to suspend or terminate contracts if either party violates these TOS or engages in behaviour that is harmful to the platform or its users.
+            </div>
+
+            <p className="text-base mb-4">
+              <strong className='text-lg'>D. Verified Payment Methods</strong><br /><br/>
+            </p>
+            <div className="text-base mb-4">
+              <strong>For Clients:</strong> Clients must have a verified payment method before they are allowed to post jobs on Remoteconnect. This verification ensures that the Client has the necessary means to compensate Freelancers for their work.
+            </div>
+            <div className="text-base mb-4">
+              <strong>For Freelancers:</strong> Freelancers must have a verified payment receiving method (e.g., a Payoneer account or another supported account) before they can accept jobs. This verification is necessary to ensure that Freelancers can receive payments securely.
+            </div>
+
+            <p className="text-base mb-4">
+              <strong className='text-lg'>E. Secure Transfer Methods</strong><br /><br/>
+              Remoteconnect uses secure methods for all financial transactions, including Payoneer API and Square API, to process payments. This ensures that all payments are handled safely and securely, providing peace of mind for both Clients and Freelancers.
+            </p>
+
+            <p className="text-base mb-4">
+              <strong className='text-lg'>F. Dispute Resolution and Fund Holding</strong><br /><br/>
+            </p>
+            <div className="text-base mb-4">
+              <strong>Fund Holding:</strong> Remoteconnect will hold funds for twenty-four (24) hours after receiving a payment to allow the Client time to open a dispute if necessary.
+            </div>
+            <div className="text-base mb-4">
+              <strong>Dispute Resolution:</strong> If a Client wishes to open a dispute within this 48-hour window, Remoteconnect will hold the funds and assist in resolving the issue. If no dispute is raised within this period, the payment will be released to the Freelancer.
+            </div>
+            <div className="text-base mb-4">
+              <strong>Refunds:</strong> If a dispute is opened and resolved in favour of the Client, a refund may be issued. If no dispute is opened within the 48-hour window, the payment will be finalised, and no refunds will be processed.
+            </div>
+              </>
+        )}
+        isActive={activeIndex === 6}
+        onToggle={toggleAccordion}
+      />
+         <AccordionItem
+            index={7}
+            title="7. Communication and Platform Integrity"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Compliance with Terms</strong><br /><br/>
                 By using our websites and apps, you agree to adhere to all terms and conditions outlined in these Terms of Service. Any violation of these terms may result in the suspension or termination of your account.
@@ -655,24 +602,16 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>D. Monitoring and Enforcement</strong><br /><br/>
                 Remoteconnect reserves the right to monitor communications on the platform to ensure compliance with these terms. Any suspected violations will be investigated, and appropriate action will be taken to maintain the integrity of the platform.
               </p>
-            </div>
-          </motion.div>
-        </div>
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[8] = el; }}>
-          <button
-            onClick={() => toggleAccordion(8)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            8. Your use of our Services
-            <span>{activeIndex === 8 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 8 ? 'auto' : 0, opacity: activeIndex === 8 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+              </>
+        )}
+        isActive={activeIndex === 7}
+        onToggle={toggleAccordion}
+      />
+        <AccordionItem
+            index={8}
+            title="8. Your use of our Services"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Prohibited Activities</strong><br /><br/>
                 You agree not to engage in any of the following prohibited activities:
@@ -715,25 +654,17 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>D. Reporting Violation</strong><br /><br/>
                 If you become aware of any violations of these Terms or other inappropriate conduct on our platforms, please contact us immediately. We will investigate and take appropriate actions as necessary to address any issues.
               </p>
-            </div>
-          </motion.div>
-        </div>
+              </>
+        )}
+        isActive={activeIndex === 8}
+        onToggle={toggleAccordion}
+      />
 
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[9] = el; }}>
-          <button
-            onClick={() => toggleAccordion(9)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-            9. International Use & Translations
-            <span>{activeIndex === 9 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 9 ? 'auto' : 0, opacity: activeIndex === 9 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+<AccordionItem
+            index={9}
+            title="9. International Use & Translations"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Geographic Restrictions</strong><br /><br/>
                 We do not guarantee that the materials on our websites and apps are suitable or available for use in all locations. Accessing our websites and apps from regions where the content is illegal or prohibited is not allowed. If you choose to access our services from your location, you do so at your own risk and are responsible for adhering to local laws.
@@ -742,25 +673,16 @@ const TosAccordion: React.FC = () => {
                 <strong className='text-lg'>B. Translation of Terms</strong><br /><br/>
                 These Terms may be translated into the local language of the applicable region. In the event of any discrepancies between the English version and the translated version, the English version will take precedence. The translated version will be considered automatically adjusted to align with and reflect the English version.
               </p>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="border border-gray-300 rounded-md" ref={(el) => { accordionRefs.current[10] = el; }}>
-          <button
-            onClick={() => toggleAccordion(10)}
-            className="flex justify-between w-full p-4 text-left text-lg font-medium focus:outline-none"
-          >
-           10. Disclaimer and Limitation of Liability
-            <span>{activeIndex === 10 ? '-' : '+'}</span>
-          </button>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: activeIndex === 10 ? 'auto' : 0, opacity: activeIndex === 10 ? 1 : 0 }}
-            transition={{ duration: 0.2, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="p-4">
+              </>
+        )}
+        isActive={activeIndex === 8}
+        onToggle={toggleAccordion}
+      />
+       <AccordionItem
+            index={10}
+            title="10. Disclaimer and Limitation of Liability"
+            content={(
+              <>
               <p className="text-base mb-4">
                 <strong className='text-lg'>A. Loss of Data Upon Account Termination</strong><br /><br/>
                 Upon termination of your account, whether voluntary or involuntary, RemoteConnect may delete all data associated with your account, including but not limited to job postings, proposals, messages, and personal information. We are not liable for any loss of data, business opportunities, or other consequential damages that may result from account termination. It is your responsibility to back up any important data before account termination.
@@ -775,13 +697,13 @@ const TosAccordion: React.FC = () => {
                 <strong>General Limitation:</strong> To the maximum extent permitted by law, RemoteConnect shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with the use of, or inability to use, our websites, apps, or services. This includes, but is not limited to, damages for loss of profits, data, or other intangible losses.<br/><br/>
                 <strong>Exclusions:</strong> Some jurisdictions do not allow the exclusion or limitation of certain damages. If these laws apply to you, the above limitations may not apply, and you may have additional rights.
               </p>
-            </div>
-          </motion.div>
-        </div>
-        
+              </>
+        )}
+        isActive={activeIndex === 10}
+        onToggle={toggleAccordion}
+      />
         </div>
       </div>
-    </div>
   );
 };
 
