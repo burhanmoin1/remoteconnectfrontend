@@ -1,35 +1,25 @@
 'use client';
-import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import AccordionItem from '../modules/AccordionModule';
 
 
 const TosAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Create a ref for each accordion section
-  const accordionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
   const toggleAccordion = (index: number) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
       setActiveIndex(index);
-      // Scroll into view when opening
-      setTimeout(() => {
-        accordionRefs.current[index]?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }, 200); // Delay to allow animation
+      
     }
   };
 
   return (
-    <div className="flex flex-col lg:w-[80%] lg:ml-40 lg:m-10 space-y-4">
+    <div className="flex text-[#1F2B5F] flex-col mt-20 lg:m-40 lg:mb-4 lg:w-[80%] space-y-4">
       <div className='m-2 xl:m-0 lg:m-0 md:m-4 sm:m-0'>
-        <h2 className='font-bold text-4xl'>Remoteconnect Terms of Service</h2>
-        <p className='font-bold italic text-xs'>Updated August 2024</p>
+        <h2 className='font-extrabold text-4xl'>Remoteconnect Terms of Service</h2>
+        <p className='font-bold italic text-sm'>Updated August 2024</p>
         <p className='text-lg mt-4 lg:w-[88%]'>
           <span className='font-bold'>These Terms of Service</span> (these "Terms") govern your use of the Remoteconnect website or apps (collectively, “our websites and apps”), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, “you” or “user” refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps.
         </p>
@@ -508,7 +498,7 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
            <p className="text-base mb-4">
-              <strong className='text-lg'>A. Payment Methods</strong><br /><br/>
+              <strong className='text-lg'>A. Payment Methods</strong><br /><br />
               Clients on Remoteconnect can make payments using the following methods:
             </p>
             <ul>
@@ -518,12 +508,12 @@ const TosAccordion: React.FC = () => {
             </ul><br/>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>B. Payment Processing</strong><br /><br/>
+              <strong className='text-lg'>B. Payment Processing</strong><br /><br />
               All payments made by Clients for services rendered by Freelancers will first be processed through Remoteconnect. The platform will deduct its applicable service fees before transferring the remaining funds to the Freelancer.
             </p>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>C. Payment Frequency</strong><br /><br/>
+              <strong className='text-lg'>C. Payment Frequency</strong>
             </p>
             <div className="text-base mb-4">
               <strong>Termination:</strong> Either party may terminate the contract in accordance with the terms specified. If a contract is terminated, both parties must fulfil any outstanding obligations and resolve any active disputes.
@@ -533,7 +523,7 @@ const TosAccordion: React.FC = () => {
             </div>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>D. Verified Payment Methods</strong><br /><br/>
+              <strong className='text-lg'>D. Verified Payment Methods</strong>
             </p>
             <div className="text-base mb-4">
               <strong>For Clients:</strong> Clients must have a verified payment method before they are allowed to post jobs on Remoteconnect. This verification ensures that the Client has the necessary means to compensate Freelancers for their work.
@@ -543,12 +533,12 @@ const TosAccordion: React.FC = () => {
             </div>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>E. Secure Transfer Methods</strong><br /><br/>
+              <strong className='text-lg'>E. Secure Transfer Methods</strong>
               Remoteconnect uses secure methods for all financial transactions, including Payoneer API and Square API, to process payments. This ensures that all payments are handled safely and securely, providing peace of mind for both Clients and Freelancers.
             </p>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>F. Dispute Resolution and Fund Holding</strong><br /><br/>
+              <strong className='text-lg'>F. Dispute Resolution and Fund Holding</strong>
             </p>
             <div className="text-base mb-4">
               <strong>Fund Holding:</strong> Remoteconnect will hold funds for twenty-four (24) hours after receiving a payment to allow the Client time to open a dispute if necessary.
@@ -675,7 +665,7 @@ const TosAccordion: React.FC = () => {
               </p>
               </>
         )}
-        isActive={activeIndex === 8}
+        isActive={activeIndex === 9}
         onToggle={toggleAccordion}
       />
        <AccordionItem

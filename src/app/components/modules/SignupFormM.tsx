@@ -134,7 +134,12 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
 
     const countryOptions = Countrylist.map((country) => ({
         value: country.Country,
-        label: country.Country,
+        label: (
+            <div className="flex items-center">
+                <img src={country.flagUrl} alt={country.Country} className="w-6 h-4 mr-2" />
+                {country.Country}
+            </div>
+        ),
     }));
 
     const [focusStates, setFocusStates] = useState({
@@ -314,7 +319,12 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                         required
                     />
                     <label htmlFor="agreed_to_terms" className="lg:mt-0 text-sm text-black lg:max-w-full"><span className='text-md'>
-                        Yes, I understand and agree to the <a href='/tos' className="text-blue-600 hover:underline">Remoteconnect Terms of Service</a> and <a href='/legal#privacy' className="text-blue-600 hover:underline">Privacy Policy</a>.</span>
+                        Yes, I understand and agree to the <a
+                        href='/tos'
+                        className="text-blue-600 border-b-2 hover:border-blue-800 transition-colors"
+                    >
+                        Remoteconnect Terms of Service
+                    </a> and <a href='/legal#privacy' className="text-blue-600 border-b-2 hover:border-blue-800">Privacy Policy</a>.</span>
                     </label>
                 </div>
                 <div className="flex justify-center">

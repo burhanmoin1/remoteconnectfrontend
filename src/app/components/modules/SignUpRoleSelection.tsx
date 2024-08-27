@@ -21,7 +21,7 @@ const SignUpRoleSelection = ({
         scale: 0.95,
         transition: { duration: 0.1, ease: 'easeOut' },
       }}
-      className={`relative text-md lg:text-lg cursor-pointer w-80 p-8 border-2 rounded-md text-center ${
+      className={`relative text-md lg:text-lg cursor-pointer w-80 p-10 border-2 rounded-md text-center ${
         isSelected
           ? 'border-[#E61464] bg-[#F9F9F9]'
           : 'border-[#E8E8E8] hover:border-[#E61464] hover:bg-[#F9F9F9]'
@@ -38,7 +38,7 @@ const SignUpRoleSelection = ({
         readOnly
         className="absolute top-2 right-2 h-5 w-5 border-2 border-[#E8E8E8] accent-[#E61464] cursor-pointer"
       />
-      A <span className='text-xl font-bold'>{boldText}</span> {description}
+      A <span>{boldText}</span> {description}
     </motion.div>
   );
 };

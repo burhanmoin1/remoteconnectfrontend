@@ -1,8 +1,10 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +27,29 @@ const Header = () => {
   // Toggle menu open/close state
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseEnter = () => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (dropdownRef.current) {
+      setTimer(
+        setTimeout(() => {
+          setIsDropdownOpen(false);
+        }, 100) // 1 second delay
+      );
+    }
+  };
+
   return (
-    <header className="w-full bg-white p-4 border-b-2 border-gray-200 shadow-sm">
+    <header className="fixed top-0 left-0 m-[-1px] w-full bg-white p-4 border-b-2 border-gray-200 shadow-sm z-50">
        <div className="container flex items-center justify-between relative">
           {/* Left side: Logo and Navigation Links */}
           <div className="flex lg:ml-14 items-center space-x-8">
@@ -39,15 +62,51 @@ const Header = () => {
               />
             </Link>
 
-            {/* Navigation Links */}
-            <div className="hidden md:flex  transform mt-4 lg:flex text-lg space-x-8">
-              <Link href="/" className="text-center hover:text-[#E61464]">
-                <p>Home</p>
-              </Link>
-              <Link href="/tos" className="text-center hover:text-[#E61464]">
-                <p>Tos</p>
-              </Link>
-            </div>
+            <div className="hidden md:flex mt-4 lg:flex text-lg space-x-8 group">
+            <Link href="/" className="text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100">
+              <p>Home</p>
+            </Link>
+            <Link href="/tos" className="text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100">
+              <p>Tos</p>
+            </Link>
+            <div
+        className="relative items-center"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+         <Link
+          href="/services"
+          className="flex items-center text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100"
+        >
+          <p>Services</p>
+          <span className="ml-2 flex items-center">
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="w-3 h-3 text-[#1F2B5F] mb-[2px]"
+              />
+            </motion.div>
+          </span>
+        </Link>
+        {isDropdownOpen && (
+          <motion.div
+            ref={dropdownRef}
+            className="absolute left-[-20px] mt-2 w-[20vmin] bg-white border border-gray-200 shadow-lg"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+          >
+            <Link href="/service1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</Link>
+            <Link href="/service2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</Link>
+            <Link href="/service3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</Link>
+          </motion.div>
+        )}
+      </div>
+          </div>
           </div>
 
           {/* Right side: Sign up and Log in Buttons */}
@@ -55,7 +114,7 @@ const Header = () => {
             <Link href="/signup" className="md:px-4 md:py-2 xl:px-6 xl:py-2 bg-[#E61464] text-white rounded-md hover:bg-[#f04a8a]">
               Sign up
             </Link>
-            <Link href="/login" >
+            <Link href="/login" className='text-[#1F2B5F] hover:text-[#E61464] border-b-2 border-transparent hover:border-[#E61464]'>
             Log in
           </Link>
           </div>
@@ -97,6 +156,7 @@ const Header = () => {
           <div className="flex flex-col items-start pl-6 w-full space-y-8">
             <Link href="/" className="text-xl py-2" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/about" className="text-xl py-2" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/tos" className="text-xl py-2" onClick={() => setIsOpen(false)}>tos</Link>
             <Link href="/contact" className="text-xl py-2" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
           

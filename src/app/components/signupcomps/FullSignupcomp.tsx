@@ -6,7 +6,7 @@ import clienticon from '@/app/assets/icons/clienticon.png';
 import freelancericon from '@/app/assets/icons/freelancericon.png';
 import SignUpRoleSelection from '../modules/SignUpRoleSelection';
 import SignupFormM from '../modules/SignupFormM';
-import backarrow from '@/app/assets/icons/icons8-back-arrow-96.png';
+import backarrow from '@/app/assets/icons/backarrow.png';
 
 const FullSignupcomp = () => {
   const [selectedRole, setSelectedRole] = useState<'client' | 'freelancer' | ''>('');
@@ -51,15 +51,21 @@ const FullSignupcomp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-20 bg-white">
+    <div className="flex flex-col items-center mt-40 bg-white">
       {(clientRole || freelancerRole) && selectedRole ? (
         <div className="relative w-full max-w-md space-y-4">
           <div className='flex flex-row lg:w-[80vmin] md:w-[70vmin] justify-between mt-[-58px]'>
+          <button
+          onClick={handleBackToRoleSelection}
+          className="flex items-center bg-transparent border-none ml-2 lg:ml-[-210px] md:ml-[-180px] cursor-pointer"
+        >
           <img
             src={backarrow.src}
-            onClick={handleBackToRoleSelection}
-            className="ml-4 lg:ml-[-210px] md:ml-[-180px] h-6 w-6 cursor-pointer"
+            className="h-4 w-4"
+            alt="Back Arrow"
           />
+          <span className="ml-2 text-sm">Previous</span>
+        </button>
           <div className='flex flex-row space-x-1 lg:space-x-3 mr-2'>
           <h3 className="text-sm"
           >{selectedRole === 'client' ? 'Need work?' : 'Require talent?'}</h3>
@@ -88,7 +94,7 @@ const FullSignupcomp = () => {
       ) : (
         <>
           <h1 className="text-2xl text-center font-semibold text-black mb-8">
-            Please choose the option that best represents you:
+            How do you plan on using Remoteconnect?
           </h1>
           <div className="flex flex-col md:flex-row md:space-y-0 md:space-x-8 lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8 mb-6">
             <SignUpRoleSelection
@@ -96,7 +102,7 @@ const FullSignupcomp = () => {
               iconSrc={clienticon.src}
               selectedRole={selectedRole}
               onRoleSelect={handleRoleSelect}
-              description="Looking to hire the perfect talent for your current team or your next project."
+              description="looking to hire the perfect talent for my current team or upcoming project."
               boldText="Client"
             />
             <SignUpRoleSelection
@@ -104,7 +110,7 @@ const FullSignupcomp = () => {
               iconSrc={freelancericon.src}
               selectedRole={selectedRole}
               onRoleSelect={handleRoleSelect}
-              description="Looking for your next exciting project or to connect with other developers or designers."
+              description="looking for my next exciting project or connect with other developers or designers."
               boldText="Freelancer"
             />
           </div>
