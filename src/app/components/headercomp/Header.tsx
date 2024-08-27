@@ -28,24 +28,36 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
+  const [openTimer, setOpenTimer] = useState<NodeJS.Timeout | null>(null);
+const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);  
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEnter = () => {
-    if (timer) {
-      clearTimeout(timer);
+    // Clear any close timer if it exists
+    if (closeTimer) {
+      clearTimeout(closeTimer);
     }
-    setIsDropdownOpen(true);
+    
+    // Set a timer to open the dropdown after a delay
+    setOpenTimer(
+      setTimeout(() => {
+        setIsDropdownOpen(true);
+      }, 10) // Delay before opening (in milliseconds)
+    );
   };
-
+  
   const handleMouseLeave = () => {
-    if (dropdownRef.current) {
-      setTimer(
-        setTimeout(() => {
-          setIsDropdownOpen(false);
-        }, 100) // 1 second delay
-      );
+    // Clear any open timer if it exists
+    if (openTimer) {
+      clearTimeout(openTimer);
     }
+  
+    // Set a timer to close the dropdown after a delay
+    setCloseTimer(
+      setTimeout(() => {
+        setIsDropdownOpen(false);
+      }, 100) // Delay before closing (in milliseconds)
+    );
   };
 
   return (
@@ -62,11 +74,11 @@ const Header = () => {
               />
             </Link>
 
-            <div className="hidden md:flex mt-4 lg:flex text-lg space-x-8 group">
-            <Link href="/" className="text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100">
+            <div className="hidden md:flex mt-4 lg:flex text-lg space-x-8">
+            <Link href="/" className="text-center text-[#1F2B5F] hover:opacity-100">
               <p>Home</p>
             </Link>
-            <Link href="/tos" className="text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100">
+            <Link href="/tos" className="text-center text-[#1F2B5F] hover:opacity-100">
               <p>Tos</p>
             </Link>
             <div
@@ -74,9 +86,8 @@ const Header = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-         <Link
-          href="/services"
-          className="flex items-center text-center text-[#1F2B5F] group-hover:opacity-50 hover:!opacity-100"
+         <a
+          className="flex items-center cursor-pointer text-center text-[#1F2B5F]"
         >
           <p>Services</p>
           <span className="ml-2 flex items-center">
@@ -91,11 +102,11 @@ const Header = () => {
               />
             </motion.div>
           </span>
-        </Link>
+        </a>
         {isDropdownOpen && (
           <motion.div
             ref={dropdownRef}
-            className="absolute left-[-20px] mt-2 w-[20vmin] bg-white border border-gray-200 shadow-lg"
+            className="absolute left-[-20px] w-[20vmin] p-2 bg-white border border-gray-200 shadow-lg"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
