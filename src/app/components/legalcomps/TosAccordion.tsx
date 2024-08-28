@@ -16,7 +16,7 @@ const TosAccordion: React.FC = () => {
   };
 
   return (
-    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-24 lg:mb-4 md:w-[50%] lg:w-[50%] space-y-4">
+    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-16 lg:mt-20 lg:mb-10 md:w-[70%] lg:w-[64%] space-y-4">
       <div className='m-2'>
         <h2 className='font-extrabold text-4xl'>Remoteconnect Terms of Service</h2>
         <p className='font-bold italic text-sm'>Updated August 2024</p>
