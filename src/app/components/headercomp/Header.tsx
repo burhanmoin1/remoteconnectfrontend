@@ -42,7 +42,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
     setOpenTimer(
       setTimeout(() => {
         setIsDropdownOpen(true);
-      }, 10) // Delay before opening (in milliseconds)
+      }, 100) // Delay before opening (in milliseconds)
     );
   };
   
@@ -75,10 +75,10 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
             </Link>
 
             <div className="hidden md:flex mt-4 lg:flex text-lg space-x-8">
-            <Link href="/" className="text-center text-[#1F2B5F] hover:opacity-100">
+            <Link href="/" className="text-center text-[#1F2B5F] hover:opacity-50">
               <p>Home</p>
             </Link>
-            <Link href="/tos" className="text-center text-[#1F2B5F] hover:opacity-100">
+            <Link href="/tos" className="text-center text-[#1F2B5F] hover:opacity-50">
               <p>Tos</p>
             </Link>
             <div
@@ -87,7 +87,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
         onMouseLeave={handleMouseLeave}
       >
          <a
-          className="flex items-center cursor-pointer text-center text-[#1F2B5F]"
+          className="flex items-center cursor-pointer text-center text-[#1F2B5F] hover:opacity-50"
         >
           <p>Services</p>
           <span className="ml-2 flex items-center">
@@ -106,14 +106,16 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
         {isDropdownOpen && (
           <motion.div
             ref={dropdownRef}
-            className="absolute left-[-20px] w-[20vmin] p-2 bg-white border border-gray-200 shadow-lg"
+            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] top-11 p-2 bg-white border border-gray-200 shadow-lg"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
           >
-            <Link href="/service1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</Link>
-            <Link href="/service2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</Link>
-            <Link href="/service3" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</Link>
+            <div className='flex flex-col'>
+            <Link href="/service1" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</Link>
+            <Link href="/service2" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</Link>
+            <Link href="/service3" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</Link>
+            </div>
           </motion.div>
         )}
       </div>

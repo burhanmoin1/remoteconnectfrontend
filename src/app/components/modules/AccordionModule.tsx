@@ -1,5 +1,5 @@
 // AccordionItem.tsx
-import React from 'react';
+import React,  { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface AccordionItemProps {
@@ -7,7 +7,7 @@ interface AccordionItemProps {
   title: string;
   content: React.ReactNode;
   isActive: boolean;
-  onToggle: (index: number) => void;
+  onToggle: (index: number, title: string) => void;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({
@@ -17,12 +17,31 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   isActive,
   onToggle,
 }) => {
+  const itemRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (isActive) {
+      setTimeout(() => {
+        itemRef.current?.scrollIntoView({
+          behavior: 'smooth'
+        });
+        // Clean up the title and update the URL
+        const formattedTitle = title
+          .replace(/^[0-9]+\.\s*/, '') // Remove leading numbers and periods (e.g., "1. ")
+          .replace(/\s+/g, '-').toLowerCase() // Replace spaces with hyphens and convert to lowercase
+          .replace(/[^\w-]+/g, ''); // Remove any characters that are not alphanumeric or hyphens
+        window.history.replaceState(null, '', `#${formattedTitle}`);
+      }, 300); // Ensure this delay matches your animation duration
+    }
+  }, [isActive, title]);
 
   return (
-    <div className="border border-gray-300 rounded-md">
+    <div ref={itemRef} className="border border-gray-300 rounded-md">
       <button
-        onClick={() => onToggle(index)}
-        className="flex justify-between w-full p-4 text-black text-left text-lg md:text-xl lg:text-xl font-medium focus:outline-none"
+        onClick={() => onToggle(index, title)}
+        className={`flex justify-between w-full p-4 text-black text-left text-lg md:text-xl lg:text-2xl font-medium focus:outline-none ${
+          isActive ? 'bg-[#1F2B5F] text-white' : 'bg-white'
+        }`} 
       >
         {title}
         <span>{isActive ? '-' : '+'}</span>

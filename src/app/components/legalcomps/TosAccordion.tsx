@@ -16,9 +16,9 @@ const TosAccordion: React.FC = () => {
   };
 
   return (
-    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-16 lg:mt-20 lg:mb-10 md:w-[70%] lg:w-[64%] space-y-4">
+    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-16 lg:mt-24 md:mt-24 md:mb-6 lg:mb-10 md:w-[70%] lg:w-[64%] space-y-4">
       <div className='m-2'>
-        <h2 className='font-extrabold text-4xl'>Remoteconnect Terms of Service</h2>
+        <h2 className='font-bold text-4xl'>Remoteconnect Terms of Service</h2>
         <p className='font-bold italic text-sm'>Updated August 2024</p>
         <p className='text-lg mt-4 '>
           <span className='font-bold'>These Terms of Service</span> (these "Terms") govern your use of the Remoteconnect website or apps (collectively, “our websites and apps”), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, “you” or “user” refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps.

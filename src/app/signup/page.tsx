@@ -4,8 +4,7 @@ import FullSignupcomp from '../components/signupcomps/FullSignupcomp';
 export default function SignupPage() {
     return (
       <main>
-        <Header/>
-       <FullSignupcomp/>
+        <Header/><FullSignupcomp/>
       </main>
     );
   }
