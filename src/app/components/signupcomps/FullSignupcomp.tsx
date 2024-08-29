@@ -7,7 +7,6 @@ import freelancericon from '@/app/assets/icons/freelancericon.png';
 import SignUpRoleSelection from '../modules/SignUpRoleSelection';
 import SignupFormM from '../modules/SignupFormM';
 import backarrow from '@/app/assets/icons/backarrow.png';
-import Image from 'next/image';
 
 const FullSignupcomp = () => {
   const [selectedRole, setSelectedRole] = useState<'client' | 'freelancer' | ''>('');
@@ -60,7 +59,7 @@ const FullSignupcomp = () => {
           onClick={handleBackToRoleSelection}
           className="flex items-center bg-transparent border-none ml-2 lg:ml-[-210px] md:ml-[-180px] cursor-pointer"
         >
-          <Image
+          <img
             src={backarrow.src}
             className="h-4 w-4"
             alt="Back Arrow"

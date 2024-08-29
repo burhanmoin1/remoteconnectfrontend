@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +42,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
     setOpenTimer(
       setTimeout(() => {
         setIsDropdownOpen(true);
-      }, 100) // Delay before opening (in milliseconds)
+      }, 10) // Delay before opening (in milliseconds)
     );
   };
   
@@ -57,7 +56,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
     setCloseTimer(
       setTimeout(() => {
         setIsDropdownOpen(false);
-      }, 100) // Delay before closing (in milliseconds)
+      }, 200) // Delay before closing (in milliseconds)
     );
   };
 
@@ -68,7 +67,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
           <div className="flex lg:ml-14 items-center space-x-8">
             {/* Logo */}
             <Link href="/">
-              <Image 
+              <img 
                 src={Logo.src}
                 alt="Remote Connect Logo" 
                 className="h-8 md:h-10 lg:h-12" 
@@ -107,7 +106,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
         {isDropdownOpen && (
           <motion.div
             ref={dropdownRef}
-            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] top-11 p-2 bg-white border border-gray-200 shadow-lg"
+            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] p-2 bg-white border border-gray-200 shadow-lg"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

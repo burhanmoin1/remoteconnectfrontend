@@ -5,7 +5,6 @@ import Select from 'react-select';
 import { SignupForm } from '@/app/types/common'; 
 import { Countrylist } from '@/app/assets/lists/common';
 import { motion} from 'framer-motion';
-import Image from 'next/image';
 
 interface SignupFormProps {
     heading: string;
@@ -147,7 +146,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         value: country.Country,
         label: (
             <div className="flex items-center">
-                <Image src={country.flagUrl} alt={country.Country} className="w-6 h-4 mr-2" />
+                <img src={country.flagUrl} alt={country.Country} className="w-6 h-4 mr-2" />
                 {country.Country}
             </div>
         ),

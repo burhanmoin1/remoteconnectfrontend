@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { RoleSelectionCardProps } from '@/app/types/common';
-import Image from 'next/image';
 
 const SignUpRoleSelection = ({
   role,
@@ -28,7 +27,7 @@ const SignUpRoleSelection = ({
           : 'border-[#E8E8E8] hover:border-[#E61464] hover:bg-[#F9F9F9]'
       }`}
     >
-      <Image
+      <img
         src={iconSrc}
         alt={`${role} Icon`}
         className="absolute top-2 left-2 h-6 w-6"
