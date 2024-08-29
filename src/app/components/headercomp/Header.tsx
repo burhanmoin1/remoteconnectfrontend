@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +68,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
           <div className="flex lg:ml-14 items-center space-x-8">
             {/* Logo */}
             <Link href="/">
-              <img 
+              <Image 
                 src={Logo.src}
                 alt="Remote Connect Logo" 
                 className="h-8 md:h-10 lg:h-12" 
@@ -168,9 +169,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
         >
           <div className="flex flex-col items-start pl-6 w-full space-y-8">
             <Link href="/" className="text-xl py-2" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link href="/about" className="text-xl py-2" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/tos" className="text-xl py-2" onClick={() => setIsOpen(false)}>tos</Link>
-            <Link href="/contact" className="text-xl py-2" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Link href="/tos" className="text-xl py-2" onClick={() => setIsOpen(false)}>tos</Link>     
           </div>
           
           <div className="flex-grow"></div>

@@ -5,6 +5,7 @@ import Select from 'react-select';
 import { SignupForm } from '@/app/types/common'; 
 import { Countrylist } from '@/app/assets/lists/common';
 import { motion} from 'framer-motion';
+import Image from 'next/image';
 
 interface SignupFormProps {
     heading: string;
@@ -60,16 +61,26 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value, type, checked } = e.target;
-        const newFormData = { ...formData, [name]: type === 'checkbox' ? checked : value };
-
+        const { name, value, type } = e.target;
+    
+        if (type === 'checkbox') {
+            const checked = (e.target as HTMLInputElement).checked;
+            setFormData({
+                ...formData,
+                [name]: checked,
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value,
+            });
+        }
+    
         if (name === 'password') {
             const errors = validatePassword(value);
             setPasswordErrors(errors);
             setPasswordValidationStatus(errors.length === 0 ? 'valid' : 'invalid');
         }
-
-        setFormData(newFormData);
     };
 
     const validatePassword = (password: string): string[] => {
@@ -136,7 +147,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         value: country.Country,
         label: (
             <div className="flex items-center">
-                <img src={country.flagUrl} alt={country.Country} className="w-6 h-4 mr-2" />
+                <Image src={country.flagUrl} alt={country.Country} className="w-6 h-4 mr-2" />
                 {country.Country}
             </div>
         ),

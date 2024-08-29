@@ -21,7 +21,7 @@ const TosAccordion: React.FC = () => {
         <h2 className='font-bold text-4xl'>Remoteconnect Terms of Service</h2>
         <p className='font-bold italic text-sm'>Updated August 2024</p>
         <p className='text-lg mt-4 '>
-          <span className='font-bold'>These Terms of Service</span> (these "Terms") govern your use of the Remoteconnect website or apps (collectively, “our websites and apps”), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, “you” or “user” refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps.
+        <span className='font-bold'>These Terms of Service</span> (these &quot;Terms&quot;) govern your use of the Remoteconnect website or apps (collectively, &ldquo;our websites and apps&rdquo;), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, &ldquo;you&rdquo; or &ldquo;user&rdquo; refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps.
         </p>
       </div>
       <div>
@@ -187,7 +187,7 @@ const TosAccordion: React.FC = () => {
                 <strong>Hourly Limit</strong> or<strong> Weekly Hourly Limit</strong> is the maximum number of hours a freelancer is allowed to work within a week as defined in the Hourly Contract. This limit ensures that both the freelancer and the client have clear expectations about the time commitment and budget for the project.  
               </p>
               <p className="text-base mb-4">
-                <strong>Hourly Rate</strong> is the amount of money that a client agrees to pay the freelancer for each hour worked under an Hourly Contract. This rate is agreed upon by both parties before the contract begins and is used to calculate the freelancer's earnings based on the hours logged.
+                <strong>Hourly Rate</strong> is the amount of money that a client agrees to pay the freelancer for each hour worked under an Hourly Contract. This rate is agreed upon by both parties before the contract begins and is used to calculate the freelancer&apos;s earnings based on the hours logged.
               </p>
               <p className="text-base mb-4">
                 <strong>Hourly Weekly Report</strong> or<strong> Hourly Weekly Report</strong> is a summary of the hours worked by the freelancer during a week in connection with an Hourly Contract. This report is submitted to the client for approval and serves as the basis for payment for that week.
@@ -245,9 +245,9 @@ const TosAccordion: React.FC = () => {
                 <p className="text-base mb-4">
                 <strong className='text-lg'>G. Job Completion and Feedback</strong>
               </p>
-                <p><strong>Job Completion:</strong>  Upon completion of a job, you are responsible for reviewing the freelancer's work and providing timely approval or requesting revisions as needed. Payments should be made promptly according to the agreed terms.
+                <p><strong>Job Completion:</strong>  Upon completion of a job, you are responsible for reviewing the freelancer&apos;s work and providing timely approval or requesting revisions as needed. Payments should be made promptly according to the agreed terms.
                 </p><br/>
-                <p><strong>Feedback System:</strong>  After the job is completed, you may leave feedback on the freelancer's performance. This feedback is visible to other potential clients and freelancers and plays a crucial role in maintaining a high standard of service on Remoteconnect.
+                <p><strong>Feedback System:</strong>  After the job is completed, you may leave feedback on the freelancer&apos;s performance. This feedback is visible to other potential clients and freelancers and plays a crucial role in maintaining a high standard of service on Remoteconnect.
                 </p><br/>
                 <p><strong>Disputing Feedback:</strong>  If you believe that a freelancer has unfairly rated your conduct or project, you may dispute the feedback. Remoteconnect will review the feedback and take appropriate action if necessary.
                 </p><br/>
@@ -283,7 +283,7 @@ const TosAccordion: React.FC = () => {
               </p>
                 <p><strong>Application Limits:</strong> Freelancers can have up to two active job proposals at any given time. If one slot is filled, only one active job proposal remains. If both slots are filled, you will be unable to apply for additional jobs until one proposal is completed or withdrawn.
                 </p><br/>
-                <p><strong>Job Suitability:</strong> You must ensure that you meet the requirements of the job before applying. Applying for jobs for which you are not qualified may result in penalties, including account suspension.''.
+                <p><strong>Job Suitability:</strong> You must ensure that you meet the requirements of the job before applying. Applying for jobs for which you are not qualified may result in penalties, including account suspension.
                 </p><br/>
                 <p className="text-base mb-4">
                 <strong className='text-lg'>C. Offer Acceptance and Contractual Obligations</strong>

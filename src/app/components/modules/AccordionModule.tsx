@@ -7,7 +7,7 @@ interface AccordionItemProps {
   title: string;
   content: React.ReactNode;
   isActive: boolean;
-  onToggle: (index: number, title: string) => void;
+  onToggle: (index: number) => void;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({
@@ -38,7 +38,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   return (
     <div ref={itemRef} className="border border-gray-300 rounded-md">
       <button
-        onClick={() => onToggle(index, title)}
+        onClick={() => onToggle(index)}
         className={`flex justify-between w-full p-4 text-black text-left text-lg md:text-xl lg:text-2xl font-medium focus:outline-none ${
           isActive ? 'bg-[#1F2B5F] text-white' : 'bg-white'
         }`} 
