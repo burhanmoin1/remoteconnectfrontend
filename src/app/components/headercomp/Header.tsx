@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

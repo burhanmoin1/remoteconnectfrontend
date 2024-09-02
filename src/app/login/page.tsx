@@ -1,8 +1,14 @@
+import React, { Suspense } from 'react';
 import Header from "../components/headercomp/Header";
 import ActivationRedirect from "../components/logincomps/LoginActivationRedirect";
 
 export default function LoginPage() {
     return (
-        <><Header /><ActivationRedirect /></>
-    )
+        <main>
+            <Header />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ActivationRedirect />
+            </Suspense>
+        </main>
+    );
 }
