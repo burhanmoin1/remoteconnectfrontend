@@ -350,9 +350,10 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
                     >
                         Create Account
                     </motion.button>
+                    
                 </div>
-                {error && <div className="text-red-500 text-sm mt-2">{error}</div>}
-                {success && <div className="text-green-500 text-sm mt-2">Signup successful!</div>}
+                {error && <div className="flex justify-center text-red-500 text-sm mt-2">{error}</div>}
+                {success && <div className="flex justify-center text-[#1EBB60] text-center text-sm mt-2">Signup successful, please verify email to continue using our services.</div>}
             </form>
         </div>
     );

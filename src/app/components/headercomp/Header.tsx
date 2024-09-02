@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,7 +107,7 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
         {isDropdownOpen && (
           <motion.div
             ref={dropdownRef}
-            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] p-2 bg-white border border-gray-200 shadow-lg"
+            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] p-4 bg-white border border-gray-200 shadow-lg"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

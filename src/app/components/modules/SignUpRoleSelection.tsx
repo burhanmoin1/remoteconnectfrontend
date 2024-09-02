@@ -14,11 +14,11 @@ const SignUpRoleSelection = ({
   return (
     <motion.div
       onClick={() => onRoleSelect(role)}
-      whileHover={{scale: 1.04,
+      whileHover={{scale: 1.02,
         transition: { duration: 0.1, ease: 'easeOut' },
       }}
       whileTap={{
-        scale: 0.95,
+        scale: 0.98,
         transition: { duration: 0.1, ease: 'easeOut' },
       }}
       className={`relative text-md lg:text-lg cursor-pointer w-80 p-10 border-2 rounded-md text-center ${

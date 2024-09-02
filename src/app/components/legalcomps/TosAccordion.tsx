@@ -31,23 +31,23 @@ const TosAccordion: React.FC = () => {
         content={(
           <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Acceptance of Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Acceptance of Terms</strong><br /><br/>
                 Our websites and apps are provided to you subject to these Terms. These Terms constitute a binding agreement between you and Remoteconnect. By accessing or using our websites and apps, you agree to accept and be bound by these Terms.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Changes to Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Changes to Terms</strong><br /><br/>
                 We may update these Terms periodically to reflect changes in our services or legal requirements. The updated version will apply to you, and the current Terms will be accessible through our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Notification of said changes</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Notification of said changes</strong><br /><br/>
                 If we believe that the updates to these Terms are to impact you, we will notify you through our websites and or via email before the changes are implemented.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Continuation of Use</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Continuation of Use</strong><br /><br/>
                 If you disagree with any version of the Terms, you can discontinue the usage of our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>E. Conflicting Agreements</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Conflicting Agreements</strong><br /><br/>
                 When you use Remoteconnect or related service, such as our websites and apps, there might be additional terms or agreements that apply to specific features or services. If there is any disagreement or conflict between these general Terms of Service and any additional terms or agreements, the terms in the additional agreements will take priority.
               </p>
             </>
@@ -62,31 +62,31 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Eligibility for Registration</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Eligibility for Registration</strong><br /><br/>
                 To register an account on Remoteconnect, you must have the legal capacity to enter into a binding contract under the laws of your country of residence. This typically means you must be of legal age (usually 18 years or older) and possess the mental capacity to agree to these terms and enter into contracts.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Age Restriction</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Age Restriction</strong><br /><br/>
                 You must be at least 18 years old or the age of majority in your jurisdiction to register for an account. By registering, you confirm that you meet this age requirement.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Updating Information</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Updating Information</strong><br /><br/>
                 You must promptly update any changes to the information you provided during registration. This helps us maintain effective communication with you and manage your account appropriately.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Account Security</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Account Security</strong><br /><br/>
                 You are responsible for keeping your account credentials confidential and for all activities that occur under your account. Notify us immediately if you suspect any unauthorized use of your account or any security breaches.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>E. Compliance with Local Laws</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Compliance with Local Laws</strong><br /><br/>
                 If your country of residence has stricter age or other requirements for entering into contracts or using online services, you must comply with those laws. You are responsible for understanding and adhering to the legal requirements applicable to you.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>F. Accuracy of Information</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>F. Accuracy of Information</strong><br /><br/>
                 You are responsible for ensuring that the details you provide during registration, and at any subsequent time, are accurate and complete. It is essential that the information you submit is current and correct.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>G. Account Suspension or Termination</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>G. Account Suspension or Termination</strong><br /><br/>
                 We reserve the right to suspend or terminate your account if we believe that you have violated these Terms or if we need to enforce compliance with our policies.
               </p>
               </>
@@ -101,19 +101,19 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Password and Login Details</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Password and Login Details</strong><br /><br/>
                 When you register an account through our websites and apps, you will be required to create a password. To prevent fraud, you must keep your Login Details confidential and not disclose them to anyone. You agree to notify us immediately of any unauthorized use of your Login Details or any other security breaches.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Security Measures</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Security Measures</strong><br /><br/>
                 If we suspect a potential security breach or misuse of our websites and apps, we may require you to update your Login Details or suspend your account to protect our services and users.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Responsibility for Account Security</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Responsibility for Account Security</strong><br /><br/>
                 You are fully responsible for maintaining the confidentiality of your Login Details and for all activities conducted through your account. You can change your password at any time via the Settings section.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Liability for Security Breaches</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Liability for Security Breaches</strong><br /><br/>
                 If you fail to maintain the confidentiality of your Login Details:
               </p>
               <ul className="list-disc list-inside mb-2">
@@ -132,23 +132,23 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Intellectual Property Rights</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Intellectual Property Rights</strong><br /><br/>
                 Remoteconnect owns all intellectual property rights associated with our websites and apps. Unless stated otherwise, Remoteconnect retains all intellectual property rights in our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Use of Your Intellectual Property</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Use of Your Intellectual Property</strong><br /><br/>
                 We do not claim ownership of any pre-existing intellectual property you own (such as your company logo). However, by using our services, you grant us a perpetual, non-transferable, royalty-free licence to use your intellectual property in the products and services we provide (or make available) to you. If you revoke this licence, we may not be able to continue offering certain products and services to you.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Restrictions on Use of Materials</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Restrictions on Use of Materials</strong><br /><br/>
                 Unless explicitly permitted by us, the materials and content on our websites and apps are intended for your personal, non-commercial use only. You must retain all copyright and proprietary notices. Reproduction, modification, copying, distribution, or use of any materials or content for non-personal or commercial purposes is prohibited without our prior written consent.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Ownership of Work Product</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Ownership of Work Product</strong><br /><br/>
                 Unless otherwise agreed upon in writing, all intellectual property rights in the work product created by freelancers during the course of the job belong to the client upon payment. Freelancers agree to transfer all rights to the client upon full payment.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>E. Submission of Ideas and Feedback</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Submission of Ideas and Feedback</strong><br /><br/>
                 We welcome your ideas and feedback regarding our websites and apps. By submitting materials or information (including suggestions for new or improved products and services) to public areas of our websites and apps (such as bulletin boards, forums, and newsgroups) or directly to us (e.g., via email), you agree that we may reproduce, distribute, transmit, create derivative works of, and publicly display such submissions. You acknowledge that you will not receive compensation for your ideas or feedback, even if we incorporate them into our websites and apps (including products and services). If required by law, you agree to formally transfer any intellectual property or other rights in your ideas and feedback to us for nominal consideration.
               </p>
             </>
@@ -199,28 +199,28 @@ const TosAccordion: React.FC = () => {
                 <strong>5.2 Clients</strong><br />
               </h3>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Registration and Account Requirements</strong>
+                <strong className='text-lg lg:text-xl'>A. Registration and Account Requirements</strong>
               </p>
               <p className="text-base mb-4"><strong>Eligibility:</strong> Only registered and verified clients may post jobs on Remoteconnect. By registering, you agree to provide accurate, complete, and up-to-date information about your business or personal details. Any failure to provide such information may lead to the suspension or termination of your account.
                 </p>
                 <p><strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account credentials. Remoteconnect is not liable for any loss or damage arising from unauthorised access to your account due to your failure to secure your login details.
               </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>B. Organisation and Team Creation</strong>
+                <strong className='text-lg lg:text-xl'>B. Organisation and Team Creation</strong>
               </p>
                 <p><strong>Mandatory Team Setup:</strong> Before posting jobs, clients are required to create an organisation or team on Remoteconnect. This structure ensures that job postings are aligned with long-term project goals and promotes cohesive development efforts.
                 </p><br/>
                 <p><strong>Role Definition:</strong> As part of the organisation setup, clients must define roles and responsibilities within their team. This allows for effective role matching and streamlines the hiring process for specific project needs.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>C. Job Posting and Offers</strong>
+                <strong className='text-lg lg:text-xl'>C. Job Posting and Offers</strong>
               </p>
                 <p><strong>Job Postings:</strong>  Clients can post jobs on Remoteconnect after setting up their organisation. Job postings should include clear and detailed descriptions of the tasks, requirements, and expectations. Remoteconnect reserves the right to remove or modify job postings that do not meet platform standards.
                 </p><br/>
                 <p><strong>Offers and Contracts:</strong> Once a suitable freelancer is identified, you may extend an offer. Accepting an offer creates a binding contract between you and the freelancer. It is your responsibility to ensure that the terms are clear and mutually agreed upon before the freelancer begins work.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>D. Payment Terms</strong>
+                <strong className='text-lg lg:text-xl'>D. Payment Terms</strong>
               </p>
                 <p><strong>Setting Pay Rates:</strong>  Clients have the flexibility to determine the pay rate for each job. Jobs on Remoteconnect can be offered either on an hourly basis or as full-time positions. Payment terms should be clearly stated in the job posting and agreed upon in the contract.
                 </p><br/>
@@ -229,21 +229,21 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Payment Disputes:</strong> In the event of a payment dispute, you should first attempt to resolve the issue directly with the freelancer. Remoteconnect will only intervene if both parties are unable to reach a resolution. Our decision in such disputes is final and binding.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>E. Project Management and Freelancer Relations</strong>
+                <strong className='text-lg lg:text-xl'>E. Project Management and Freelancer Relations</strong>
               </p>
                 <p><strong>Ongoing Communication:</strong>  Clients are expected to maintain clear and timely communication with freelancers throughout the duration of the project. This includes providing necessary resources, clarifying expectations, and responding to inquiries.
                 </p><br/>
                 <p><strong>Professional Conduct:</strong> Clients must treat freelancers with respect and professionalism. Any form of harassment, discrimination, or unprofessional behaviour will not be tolerated and may result in the suspension or termination of your account.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>F. Intellectual Property and Confidentiality</strong>
+                <strong className='text-lg lg:text-xl'>F. Intellectual Property and Confidentiality</strong>
               </p>
                 <p><strong>Ownership:</strong>  As a client, you typically own the intellectual property created during the course of a job unless otherwise agreed upon in the contract. It is your responsibility to specify ownership terms in the job posting and contract.
                 </p><br/>
                 <p><strong>Confidentiality:</strong> You must ensure that any confidential information shared with freelancers is protected. Non-disclosure agreements (NDAs) may be required, and any breach of confidentiality by a freelancer should be reported to Remoteconnect immediately.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>G. Job Completion and Feedback</strong>
+                <strong className='text-lg lg:text-xl'>G. Job Completion and Feedback</strong>
               </p>
                 <p><strong>Job Completion:</strong>  Upon completion of a job, you are responsible for reviewing the freelancer&apos;s work and providing timely approval or requesting revisions as needed. Payments should be made promptly according to the agreed terms.
                 </p><br/>
@@ -252,19 +252,19 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Disputing Feedback:</strong>  If you believe that a freelancer has unfairly rated your conduct or project, you may dispute the feedback. Remoteconnect will review the feedback and take appropriate action if necessary.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>H. Account Suspension and Termination</strong>
+                <strong className='text-lg lg:text-xl'>H. Account Suspension and Termination</strong>
               </p>
                 <p><strong>Violations:</strong>   Remoteconnect reserves the right to suspend or terminate your account if you violate these TOS, including but not limited to failing to pay freelancers as agreed, posting fraudulent job offers, or engaging in unprofessional conduct.
                 </p><br/>
                 <p><strong>Termination by Client:</strong>  You may choose to terminate your account at any time. However, you must complete any active contracts and resolve any disputes before doing so.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>I. Compliance with Laws</strong>
+                <strong className='text-lg lg:text-xl'>I. Compliance with Laws</strong>
               </p>
                 <p><strong>Legal Obligations:</strong>  You are responsible for complying with all applicable laws, including tax obligations, when using Remoteconnect. This includes ensuring that you have the necessary permits or licences to hire freelancers and operate your business.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>J. Amendments to Terms of Service</strong>
+                <strong className='text-lg lg:text-xl'>J. Amendments to Terms of Service</strong>
               </p>
                 <p><strong>Changes to Terms:</strong>  Remoteconnect may update these Terms of Service from time to time. If changes are made, you will be notified 30 days before they take effect. Continued use of the platform after the changes take effect will signify your acceptance of the revised Terms of Service.
                 </p><br/>
@@ -272,21 +272,21 @@ const TosAccordion: React.FC = () => {
                 <strong>5.3 Freelancers</strong><br />
               </h3>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Registration and Account Requirements</strong>
+                <strong className='text-lg lg:text-xl'>A. Registration and Account Requirements</strong>
               </p>
                 <p><strong>Eligibility:</strong> Only registered and verified freelancers may apply for jobs on Remoteconnect. By registering, you agree to provide accurate, complete, and up-to-date information about yourself. Failure to do so may result in the suspension or termination of your account.
                 </p><br/>
                 <p><strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your login credentials. Remoteconnect will not be liable for any loss or damage arising from your failure to secure your account.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>B. Job Applications and Proposals</strong>
+                <strong className='text-lg lg:text-xl'>B. Job Applications and Proposals</strong>
               </p>
                 <p><strong>Application Limits:</strong> Freelancers can have up to two active job proposals at any given time. If one slot is filled, only one active job proposal remains. If both slots are filled, you will be unable to apply for additional jobs until one proposal is completed or withdrawn.
                 </p><br/>
                 <p><strong>Job Suitability:</strong> You must ensure that you meet the requirements of the job before applying. Applying for jobs for which you are not qualified may result in penalties, including account suspension.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>C. Offer Acceptance and Contractual Obligations</strong>
+                <strong className='text-lg lg:text-xl'>C. Offer Acceptance and Contractual Obligations</strong>
               </p>
                 <p><strong>Offer Review:</strong>  Once a client makes an offer, you are responsible for reviewing the terms carefully. Accepting an offer creates a binding contract between you and the client.
                 </p><br/>
@@ -295,47 +295,47 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Fixed-Price Contracts:</strong>  For fixed-price jobs, you must agree on deliverables and deadlines before starting work. Payment will be tied to the completion of agreed milestones.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>D. Conduct and Professionalism</strong>
+                <strong className='text-lg lg:text-xl'>D. Conduct and Professionalism</strong>
               </p>
                 <p><strong>Professional Standards:</strong>  You are expected to maintain high professional standards while working on Remoteconnect. This includes meeting deadlines, communicating effectively with clients, and delivering high-quality work.
                 </p><br/>
                 <p><strong>Communication:</strong>   Clear and timely communication with clients is essential. Failure to respond to client inquiries within a reasonable time frame may result in negative feedback or account penalties.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>E. Intellectual Property and Confidentiality</strong>
+                <strong className='text-lg lg:text-xl'>E. Intellectual Property and Confidentiality</strong>
               </p>
                 <p><strong>Ownership:</strong>  Any intellectual property created during the course of a job typically belongs to the client unless otherwise agreed upon. You must transfer all rights to the client upon completion of the job.
                 </p><br/>
                 <p><strong>Confidentiality:</strong> You must keep all client information confidential. Non-disclosure agreements (NDAs) may be required, and failure to comply may result in legal action and account termination.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>F. Payments and Disputes</strong>
+                <strong className='text-lg lg:text-xl'>F. Payments and Disputes</strong>
               </p>
                 <p><strong>Payment Terms:</strong>  Payments will be made according to the terms agreed upon in the contract. For hourly contracts, payments are made based on the hours reported and approved by the client. For fixed-price contracts, payments are tied to milestone completion.
                 </p><br/>
                 <p><strong>Dispute Resolution:</strong> If a dispute arises with a client, you should attempt to resolve it directly. Remoteconnect will only intervene if the parties are unable to reach a resolution. Our decision in such disputes is final and binding.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>G. Account Suspension and Termination</strong>
+                <strong className='text-lg lg:text-xl'>G. Account Suspension and Termination</strong>
               </p>
                 <p><strong>Violations:</strong>  Remoteconnect reserves the right to suspend or terminate your account if you violate these TOS, including but not limited to applying for jobs for which you are not qualified, failing to deliver work as agreed, or engaging in unprofessional conduct.
                 </p><br/>
                 <p><strong>Termination by Freelancer:</strong> You may choose to terminate your account at any time. However, you must complete any active contracts and resolve any disputes before doing so.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>H. Review and Feedback System</strong>
+                <strong className='text-lg lg:text-xl'>H. Review and Feedback System</strong>
               </p>
                 <p><strong>Feedback:</strong> Upon completion of a job, clients may leave feedback on your performance. This feedback will be visible to other potential clients and can impact your ability to secure future jobs.
                 </p><br/>
                 <p><strong>Disputing Feedback:</strong> If you believe that feedback left by a client is unfair or violates our guidelines, you may dispute it. Remoteconnect will review the feedback and take appropriate action if necessary.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>I. Compliance with Laws</strong>
+                <strong className='text-lg lg:text-xl'>I. Compliance with Laws</strong>
               </p>
                 <p><strong>Legal Obligations:</strong> You are responsible for complying with all applicable laws, including tax obligations, while using Remoteconnect. This includes reporting income earned through the platform and ensuring that you have the necessary permits or licences to offer your services.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>J. Amendments to Terms of Service</strong>
+                <strong className='text-lg lg:text-xl'>J. Amendments to Terms of Service</strong>
               </p>
                 <p><strong>Changes to TOS:</strong> Remoteconnect may update these TOS from time to time. If changes are made, you will be notified 30 days before they take effect. Continued use of the platform after the changes take effect will signify your acceptance of the revised TOS.
                 </p><br/>
@@ -343,7 +343,7 @@ const TosAccordion: React.FC = () => {
                 <strong>5.4 Jobs</strong><br />
               </h3>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Job Posting and Management</strong>
+                <strong className='text-lg lg:text-xl'>A. Job Posting and Management</strong>
               </p>
                 <p><strong>Eligibility:</strong>  Only registered and verified clients are permitted to post jobs on Remoteconnect. To post a job, you must first create an organisation or team and define the roles and responsibilities within your team.
                 </p><br/>
@@ -352,7 +352,7 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Posting Fees:</strong>  Remoteconnect may charge fees for posting jobs, which will be outlined before you complete the posting process. These fees are non-refundable, even if the job posting is removed or modified.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>B. Job Offers and Contracts</strong>
+                <strong className='text-lg lg:text-xl'>B. Job Offers and Contracts</strong>
               </p>
                 <p><strong>Offers:</strong> Once a freelancer applies to a job posting, you may review their application and extend an offer if they are a suitable match. An offer constitutes a binding agreement between you (the client) and the freelancer.
                 </p><br/>
@@ -361,7 +361,7 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Modification of Contracts:</strong> Any changes to the terms of a contract must be agreed upon by both parties and documented in writing. Unauthorised modifications or verbal agreements are not enforceable.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>C. Payment Terms</strong>
+                <strong className='text-lg lg:text-xl'>C. Payment Terms</strong>
               </p>
                 <p><strong>Payment Structure:</strong>  Jobs can be offered on an hourly basis, per project, or as full-time positions. You are responsible for specifying the payment structure in your job posting and contract.
                 </p><br/>
@@ -370,7 +370,7 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Dispute Resolution:</strong>  In the event of a payment dispute, you should attempt to resolve the issue directly with the freelancer. If the dispute cannot be resolved, Remoteconnect will intervene only if both parties fail to reach an agreement. Our decision in such disputes is final.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>D. Job Completion and Feedback</strong>
+                <strong className='text-lg lg:text-xl'>D. Job Completion and Feedback</strong>
               </p>
                 <p><strong>Completion:</strong> You are responsible for reviewing the freelancers work upon completion of the job. Any issues or requests for revisions should be communicated promptly. Final approval and payment should be made according to the agreed terms.
                 </p><br/>
@@ -379,35 +379,35 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Dispute of Feedback:</strong> If you believe that the feedback received is unfair or inaccurate, you may file a dispute. Remoteconnect will review the dispute and take appropriate action if necessary.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>E. Job Posting Restrictions</strong>
+                <strong className='text-lg lg:text-xl'>E. Job Posting Restrictions</strong>
               </p>
                 <p><strong>Prohibited Content:</strong> Job postings must not include discriminatory, defamatory, or illegal content. Remoteconnect reserves the right to remove postings that violate these guidelines or applicable laws.
                 </p><br/>
                 <p><strong>Duplicate Postings:</strong> Duplicate job postings for the same or similar positions are not permitted. All job postings must be unique and provide specific details about the job.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>F. Confidentiality and Intellectual Property</strong>
+                <strong className='text-lg lg:text-xl'>F. Confidentiality and Intellectual Property</strong>
               </p>
                 <p><strong>Confidential Information:</strong>  You must ensure that any confidential information shared with freelancers is protected. Any breaches of confidentiality should be reported to Remoteconnect immediately.
                 </p><br/>
                 <p><strong>Intellectual Property:</strong> Unless otherwise agreed upon in the contract, you typically own the intellectual property created during the course of a job. It is your responsibility to specify ownership terms clearly in the job posting and contract.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>G. Termination and Suspension</strong>
+                <strong className='text-lg lg:text-xl'>G. Termination and Suspension</strong>
               </p>
                 <p><strong>Termination:</strong> You may terminate a job posting or contract at any time, provided that you fulfil any existing obligations and resolve any active disputes.
                 </p><br/>
                 <p><strong>Suspension:</strong>  Remoteconnect reserves the right to suspend or terminate your ability to post jobs if you violate these TOS or engage in behaviour that is deemed harmful to the platform or its users.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>H. Compliance with Laws</strong>
+                <strong className='text-lg lg:text-xl'>H. Compliance with Laws</strong>
               </p>
                 <p><strong>Legal Compliance:</strong> You are responsible for ensuring that your job postings and contracts comply with all applicable laws and regulations. This includes, but is not limited to, employment laws, tax obligations, and intellectual property laws.
                 </p><br/>
                 <p><strong>Suspension:</strong>  Remoteconnect reserves the right to suspend or terminate your ability to post jobs if you violate these TOS or engage in behaviour that is deemed harmful to the platform or its users.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>I. Amendments to Terms of Service</strong>
+                <strong className='text-lg lg:text-xl'>I. Amendments to Terms of Service</strong>
               </p>
                 <p><strong>Changes:</strong> Remoteconnect may update these TOS from time to time. You will be notified of any changes 30 days before they take effect. Continued use of the platform after the changes take effect will signify your acceptance of the revised TOS.
                 </p><br/>
@@ -415,7 +415,7 @@ const TosAccordion: React.FC = () => {
                 <strong>5.5 Contracts</strong><br />
               </h3>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Contract Formation</strong>
+                <strong className='text-lg lg:text-xl'>A. Contract Formation</strong>
               </p>
                 <p><strong>Creation:</strong> A contract is formed when a client extends an offer to a freelancer, and the freelancer accepts the offer. This contract constitutes a binding agreement between the client and freelancer and outlines the terms of their engagement.
                 </p><br/>
@@ -432,7 +432,7 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Agreement:</strong> Both parties must agree to and document all terms in writing. Verbal agreements or informal communications are not considered legally binding.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>B. Payment Terms</strong>
+                <strong className='text-lg lg:text-xl'>B. Payment Terms</strong>
               </p>
                 <p><strong>Payment Structure:</strong> Contracts can specify payment on an hourly basis, per project, or as a full-time position. All payment terms must be clearly outlined and agreed upon before work begins.
                 </p><br/>
@@ -441,14 +441,14 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Fees:</strong>  Remoteconnect reserves the right to charge service fees based on the job type and rate. These fees will be communicated before the contract is finalised.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>C. Modifications and Amendments</strong>
+                <strong className='text-lg lg:text-xl'>C. Modifications and Amendments</strong>
               </p>
                 <p><strong>Changes:</strong>  Any changes to the contract terms must be mutually agreed upon by both parties and documented in writing. Unauthorised modifications or verbal agreements are not enforceable.
                 </p><br/>
                 <p><strong>Approval:</strong>  Both client and freelancer must approve any amendments before they become effective.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>D. Completion and Delivery</strong>
+                <strong className='text-lg lg:text-xl'>D. Completion and Delivery</strong>
               </p>
                 <p><strong>Deliverables:</strong> Freelancers are responsible for delivering the work according to the specifications and deadlines outlined in the contract.
                 </p><br/>
@@ -457,33 +457,33 @@ const TosAccordion: React.FC = () => {
                 <p><strong>Acceptance:</strong>  Once the work is completed and accepted, the client must make payment as agreed. Any delays in payment must be addressed promptly.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>E. Dispute Resolution</strong>
+                <strong className='text-lg lg:text-xl'>E. Dispute Resolution</strong>
               </p>
                 <p><strong>Resolution:</strong> In case of disputes regarding the contract, both parties should attempt to resolve the issue through direct communication. If a resolution cannot be reached, Remoteconnect may assist in mediating the dispute if both parties agree.
                 </p><br/>
                 <p><strong>Intervention:</strong>  Remoteconnects intervention is limited to cases where direct resolution is not feasible. Our decision in such disputes is final.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>F. Confidentiality and Intellectual Property</strong>
+                <strong className='text-lg lg:text-xl'>F. Confidentiality and Intellectual Property</strong>
               </p>
                 <p><strong>Confidential Information:</strong> Both parties must protect any confidential information shared during the contract. Breaches of confidentiality must be reported to Remoteconnect immediately.
                 </p><br/>
                 <p><strong>Intellectual Property:</strong>  Ownership of intellectual property created during the contract is typically specified in the contract. Unless otherwise agreed, intellectual property rights will be retained by the client or freelancer as per the contract terms.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>G. Termination</strong>
+                <strong className='text-lg lg:text-xl'>G. Termination</strong>
               </p>
                 <p><strong>Termination:</strong> Either party may terminate the contract in accordance with the terms specified. If a contract is terminated, both parties must fulfil any outstanding obligations and resolve any active disputes.
                 </p><br/>
                 <p><strong>Suspension:</strong>  Remoteconnect reserves the right to suspend or terminate contracts if either party violates these TOS or engages in behaviour that is harmful to the platform or its users.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>H. Compliance with Laws</strong>
+                <strong className='text-lg lg:text-xl'>H. Compliance with Laws</strong>
               </p>
                 <p><strong>Legal Compliance:</strong> Both client and freelancer must ensure that their contract and work comply with all applicable laws and regulations, including employment laws, tax obligations, and intellectual property laws.
                 </p><br/>
                 <p className="text-base mb-4">
-                <strong className='text-lg'>I. Amendments to Terms of Service</strong>
+                <strong className='text-lg lg:text-xl'>I. Amendments to Terms of Service</strong>
               </p>
                 <p><strong>Updates:</strong> Remoteconnect may update these TOS from time to time. You will be notified of any changes 30 days before they take effect. Continued use of the platform after the changes take effect will signify your acceptance of the revised TOS.
                 </p>
@@ -498,7 +498,7 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
            <p className="text-base mb-4">
-              <strong className='text-lg'>A. Payment Methods</strong><br /><br />
+              <strong className='text-lg lg:text-xl'>A. Payment Methods</strong><br /><br />
               Clients on Remoteconnect can make payments using the following methods:
             </p>
             <ul>
@@ -508,12 +508,12 @@ const TosAccordion: React.FC = () => {
             </ul><br/>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>B. Payment Processing</strong><br /><br />
+              <strong className='text-lg lg:text-xl'>B. Payment Processing</strong><br /><br />
               All payments made by Clients for services rendered by Freelancers will first be processed through Remoteconnect. The platform will deduct its applicable service fees before transferring the remaining funds to the Freelancer.
             </p>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>C. Payment Frequency</strong>
+              <strong className='text-lg lg:text-xl'>C. Payment Frequency</strong>
             </p>
             <div className="text-base mb-4">
               <strong>Termination:</strong> Either party may terminate the contract in accordance with the terms specified. If a contract is terminated, both parties must fulfil any outstanding obligations and resolve any active disputes.
@@ -523,7 +523,7 @@ const TosAccordion: React.FC = () => {
             </div>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>D. Verified Payment Methods</strong>
+              <strong className='text-lg lg:text-xl'>D. Verified Payment Methods</strong>
             </p>
             <div className="text-base mb-4">
               <strong>For Clients:</strong> Clients must have a verified payment method before they are allowed to post jobs on Remoteconnect. This verification ensures that the Client has the necessary means to compensate Freelancers for their work.
@@ -533,12 +533,12 @@ const TosAccordion: React.FC = () => {
             </div>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>E. Secure Transfer Methods</strong>
+              <strong className='text-lg lg:text-xl'>E. Secure Transfer Methods</strong><br/><br/>
               Remoteconnect uses secure methods for all financial transactions, including Payoneer API and Square API, to process payments. This ensures that all payments are handled safely and securely, providing peace of mind for both Clients and Freelancers.
             </p>
 
             <p className="text-base mb-4">
-              <strong className='text-lg'>F. Dispute Resolution and Fund Holding</strong>
+              <strong className='text-lg lg:text-xl'>F. Dispute Resolution and Fund Holding</strong>
             </p>
             <div className="text-base mb-4">
               <strong>Fund Holding:</strong> Remoteconnect will hold funds for twenty-four (24) hours after receiving a payment to allow the Client time to open a dispute if necessary.
@@ -560,11 +560,11 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Compliance with Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Compliance with Terms</strong><br /><br/>
                 By using our websites and apps, you agree to adhere to all terms and conditions outlined in these Terms of Service. Any violation of these terms may result in the suspension or termination of your account.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Prohibited Communications</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Prohibited Communications</strong><br /><br/>
                 To maintain the integrity and security of our platform, you agree not to engage in any of the following activities:
               </p>
               <ol>
@@ -585,11 +585,11 @@ const TosAccordion: React.FC = () => {
               </li>
             </ol><br/>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Consequences of Violations</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Consequences of Violations</strong><br /><br/>
                 Any violation of the above policies may result in immediate account termination. Remoteconnect reserves the right to take appropriate legal action in cases of severe or repeated violations.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Monitoring and Enforcement</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Monitoring and Enforcement</strong><br /><br/>
                 Remoteconnect reserves the right to monitor communications on the platform to ensure compliance with these terms. Any suspected violations will be investigated, and appropriate action will be taken to maintain the integrity of the platform.
               </p>
               </>
@@ -603,7 +603,7 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Prohibited Activities</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Prohibited Activities</strong><br /><br/>
                 You agree not to engage in any of the following prohibited activities:
               </p>
               <ul>
@@ -633,15 +633,15 @@ const TosAccordion: React.FC = () => {
                 </li><br />
               </ul>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Account Responsibility</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Account Responsibility</strong><br /><br/>
                 You are solely responsible for all activities conducted under your account. This includes maintaining the confidentiality and security of your login credentials and ensuring that your account is not used for any prohibited activities.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Action Against Violations</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Action Against Violations</strong><br /><br/>
                 We reserve the right to take appropriate action against any user who violates these Terms, including but not limited to suspending or terminating their account, removing any offending content, and reporting such violations to relevant authorities.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>D. Reporting Violation</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Reporting Violation</strong><br /><br/>
                 If you become aware of any violations of these Terms or other inappropriate conduct on our platforms, please contact us immediately. We will investigate and take appropriate actions as necessary to address any issues.
               </p>
               </>
@@ -656,11 +656,11 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Geographic Restrictions</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Geographic Restrictions</strong><br /><br/>
                 We do not guarantee that the materials on our websites and apps are suitable or available for use in all locations. Accessing our websites and apps from regions where the content is illegal or prohibited is not allowed. If you choose to access our services from your location, you do so at your own risk and are responsible for adhering to local laws.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Translation of Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Translation of Terms</strong><br /><br/>
                 These Terms may be translated into the local language of the applicable region. In the event of any discrepancies between the English version and the translated version, the English version will take precedence. The translated version will be considered automatically adjusted to align with and reflect the English version.
               </p>
               </>
@@ -674,16 +674,16 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg'>A. Loss of Data Upon Account Termination</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Loss of Data Upon Account Termination</strong><br /><br/>
                 Upon termination of your account, whether voluntary or involuntary, RemoteConnect may delete all data associated with your account, including but not limited to job postings, proposals, messages, and personal information. We are not liable for any loss of data, business opportunities, or other consequential damages that may result from account termination. It is your responsibility to back up any important data before account termination.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>B. Amendment of Data</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Amendment of Data</strong><br /><br/>
                 <strong>Data Modification:</strong> Remoteconnect reserves the right to amend, modify, or update any data, including but not limited to user profiles, job postings, and other information, as deemed necessary for operational or business purposes. This includes correcting errors, updating information, or making changes in accordance with our policies and practices.<br/><br/>
                 <strong>User Responsibility:</strong> It is your responsibility to review and verify the accuracy of the data associated with your account. RemoteConnect is not responsible for any inaccuracies or outdated information that may occur as a result of data amendments.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg'>C. Limitation of Liability</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Limitation of Liability</strong><br /><br/>
                 <strong>General Limitation:</strong> To the maximum extent permitted by law, RemoteConnect shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in connection with the use of, or inability to use, our websites, apps, or services. This includes, but is not limited to, damages for loss of profits, data, or other intangible losses.<br/><br/>
                 <strong>Exclusions:</strong> Some jurisdictions do not allow the exclusion or limitation of certain damages. If these laws apply to you, the above limitations may not apply, and you may have additional rights.
               </p>
