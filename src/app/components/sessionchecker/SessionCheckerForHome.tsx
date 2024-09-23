@@ -74,7 +74,6 @@ const SessionCheckerForHome: React.FC = () => {
       ) : (
         <div>
           <TestTwoHeader />
-          <UserInfo />
         </div>
       )}
     </div>

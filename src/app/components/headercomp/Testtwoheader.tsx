@@ -80,7 +80,7 @@ const TestTwoHeader = () => {
         </div>
         {/* Nav items */}
         <div className='hidden ml-8 2xl:flex xl:flex lg:flex md:flex sm:flex md:text-md '>
-        {['Home', 'Services', 'Products', 'tos'].map((item, index) => (
+        {['Home', 'tos'].map((item, index) => (
           <div
             key={index}
             className="relative group"
@@ -220,52 +220,7 @@ const TestTwoHeader = () => {
               <Link href="/tos" className="text-xl py-2" onClick={() => setIsOpen(false)} >tos</Link>     
               
                 {/* Services Accordion */}
-                <div className="flex flex-col w-full">
-                  <div className="flex justify-between items-center w-full pr-6" onClick={() => handleArrowToggle('services')}>
-                    <Link href="#" className="text-xl py-2">Services</Link>
-                    <Image
-                      src={activeSection === 'services' ? uparrow : downarrow}
-                      alt={activeSection === 'services' ? 'Up arrow' : 'Down arrow'}
-                      className="h-5 w-5"
-                    />
-                  </div>
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: activeSection === 'services' ? 'auto' : 0, opacity: activeSection === 'services' ? 1 : 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pl-2 py-2">
-                      <Link href="#" className="block py-1 text-black">Service 1</Link>
-                      <Link href="#" className="block py-1 text-black">Service 2</Link>
-                      <Link href="#" className="block py-1 text-black">Service 3</Link>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Products Accordion */}
-                <div className="flex flex-col w-full">
-                  <div className="flex justify-between items-center w-full pr-6" onClick={() => handleArrowToggle('products')}>
-                    <Link href="#" className="text-xl py-2">Products</Link>
-                    <Image
-                      src={activeSection === 'products' ? uparrow : downarrow}
-                      alt={activeSection === 'products' ? 'Up arrow' : 'Down arrow'}
-                      className="h-5 w-5"
-                    />
-                  </div>
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: activeSection === 'products' ? 'auto' : 0, opacity: activeSection === 'products' ? 1 : 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pl-2 py-2">
-                      <Link href="#" className="block py-1 text-black">Product 1</Link>
-                      <Link href="#" className="block py-1 text-black">Product 2</Link>
-                      <Link href="#" className="block py-1 text-black">Product 3</Link>
-                    </div>
-                  </motion.div>
-                </div>
+              
               </div>
 
             
