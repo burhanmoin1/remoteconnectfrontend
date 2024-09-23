@@ -4,7 +4,7 @@ import axios from 'axios';
 import Select from 'react-select';
 import { SignupForm } from '@/app/types/common'; 
 import { Countrylist } from '@/app/assets/lists/common';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface SignupFormProps {
     heading: string;
@@ -44,7 +44,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         setFocusStates({ ...focusStates, [field]: false });
         if (formData.email) {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/email_validator/', {
+                const response = await axios.get('http://192.168.100.60:8000/api/email_validator/', {
                     params: { email: formData.email }
                 });
 
@@ -89,9 +89,6 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
         } else {
             if (password.length < 8) {
                 errors.push('Password must be at least 8 characters long.');
-            }
-            if (!/[A-Za-z]/.test(password)) {
-                errors.push('Password must contain at least one letter.');
             }
             if (!/[a-z]/.test(password)) {
                 errors.push('Password must contain at least one lowercase letter.');
@@ -162,7 +159,7 @@ const SignupFormM: React.FC<SignupFormProps> = ({ heading, submitUrl }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="flex flex-col items-center max-w-md mx-auto ">
+        <div className="flex flex-col items-center max-w-md mx-auto">
             <h2 className="text-2xl font-bold mb-6">{heading}</h2>
             <form onSubmit={handleSubmit} className="w-[90vmin] md:w-[60vmin] lg:w-[60vmin] flex flex-col space-y-4">
                 

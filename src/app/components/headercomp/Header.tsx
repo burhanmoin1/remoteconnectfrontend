@@ -1,10 +1,8 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Logo from '@/app/assets/icons/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,41 +22,7 @@ const Header = () => {
     };
   }, [isOpen]);
 
-  // Toggle menu open/close state
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [openTimer, setOpenTimer] = useState<NodeJS.Timeout | null>(null);
-const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);  
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseEnter = () => {
-    // Clear any close timer if it exists
-    if (closeTimer) {
-      clearTimeout(closeTimer);
-    }
-    
-    // Set a timer to open the dropdown after a delay
-    setOpenTimer(
-      setTimeout(() => {
-        setIsDropdownOpen(true);
-      }, 10) // Delay before opening (in milliseconds)
-    );
-  };
-  
-  const handleMouseLeave = () => {
-    // Clear any open timer if it exists
-    if (openTimer) {
-      clearTimeout(openTimer);
-    }
-  
-    // Set a timer to close the dropdown after a delay
-    setCloseTimer(
-      setTimeout(() => {
-        setIsDropdownOpen(false);
-      }, 200) // Delay before closing (in milliseconds)
-    );
-  };
 
   return (
     <header className="fixed top-0 left-0 m-[-1px] w-full bg-white p-4 border-b-2 border-gray-200 shadow-sm z-50">
@@ -81,44 +45,6 @@ const [closeTimer, setCloseTimer] = useState<NodeJS.Timeout | null>(null);
             <Link href="/tos" className="text-center text-[#1F2B5F] hover:opacity-50">
               <p>Tos</p>
             </Link>
-            <div
-        className="relative items-center"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-         <a
-          className="flex items-center cursor-pointer text-center text-[#1F2B5F] hover:opacity-50"
-        >
-          <p>Services</p>
-          <span className="ml-2 flex items-center">
-            <motion.div
-              initial={{ rotate: 0 }}
-              animate={{ rotate: isDropdownOpen ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="w-3 h-3 text-[#1F2B5F] mb-[2px]"
-              />
-            </motion.div>
-          </span>
-        </a>
-        {isDropdownOpen && (
-          <motion.div
-            ref={dropdownRef}
-            className="absolute left-[-30vmin] w-[100vmin] h-[40vh] p-4 bg-white border border-gray-200 shadow-lg"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-          >
-            <div className='flex flex-col'>
-            <Link href="/service1" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 1</Link>
-            <Link href="/service2" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 2</Link>
-            <Link href="/service3" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Service 3</Link>
-            </div>
-          </motion.div>
-        )}
-      </div>
           </div>
           </div>
 

@@ -38,11 +38,11 @@ const FullSignupcomp = () => {
   const formProps = {
     client: {
       heading: 'Applying as a client',
-      submitUrl: 'http://127.0.0.1:8000/api/clientsignup/',
+      submitUrl: 'http://192.168.100.60:8000/api/clientsignup/',
     },
     freelancer: {
       heading: 'Applying as a freelancer',
-      submitUrl: 'http://127.0.0.1:8000/api/freelancersignup/',
+      submitUrl: 'http://192.168.100.60:8000/api/freelancersignup/',
     },
   };
 

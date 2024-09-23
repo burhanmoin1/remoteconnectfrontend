@@ -1,5 +1,4 @@
-// AccordionItem.tsx
-import React,  { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface AccordionItemProps {
@@ -23,25 +22,30 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     if (isActive) {
       setTimeout(() => {
         itemRef.current?.scrollIntoView({
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
-        // Clean up the title and update the URL
-        const formattedTitle = title
-          .replace(/^[0-9]+\.\s*/, '') // Remove leading numbers and periods (e.g., "1. ")
-          .replace(/\s+/g, '-').toLowerCase() // Replace spaces with hyphens and convert to lowercase
-          .replace(/[^\w-]+/g, ''); // Remove any characters that are not alphanumeric or hyphens
-        window.history.replaceState(null, '', `#${formattedTitle}`);
+        // After scrolling into view, adjust the scroll position for the header height
+        setTimeout(() => {
+          const headerOffset = 100; // Adjust this value based on your header height
+          const elementPosition = itemRef.current?.getBoundingClientRect().top || 0;
+          const offsetPosition = elementPosition - headerOffset;
+
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }, 120); // Adjust this delay to match your animation timing
       }, 300); // Ensure this delay matches your animation duration
     }
   }, [isActive, title]);
 
   return (
-    <div ref={itemRef} className="border border-gray-300 rounded-md">
+    <div ref={itemRef}>
       <button
         onClick={() => onToggle(index)}
         className={`flex justify-between w-full p-4 text-black text-left text-lg md:text-xl lg:text-2xl font-medium focus:outline-none ${
           isActive ? 'bg-[#1F2B5F] text-white' : 'bg-white'
-        }`} 
+        }`}
       >
         {title}
         <span>{isActive ? '-' : '+'}</span>

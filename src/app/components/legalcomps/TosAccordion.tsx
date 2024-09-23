@@ -16,11 +16,11 @@ const TosAccordion: React.FC = () => {
   };
 
   return (
-    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-16 lg:mt-24 md:mt-24 md:mb-6 lg:mb-10 md:w-[70%] lg:w-[64%] space-y-4">
+    <div className="flex text-[#1F2B5F] flex-col items-center mx-auto mt-20 lg:mt-24 md:mt-24 md:mb-6 lg:mb-10 md:w-[70%] lg:w-[60%] space-y-4">
       <div className='m-2'>
         <h2 className='font-bold text-4xl'>Remoteconnect Terms of Service</h2>
         <p className='font-bold italic text-sm'>Updated August 2024</p>
-        <p className='text-lg mt-4 '>
+        <p className='text-lg mt-2'>
         <span className='font-bold'>These Terms of Service</span> (these &quot;Terms&quot;) govern your use of the Remoteconnect website or apps (collectively, &ldquo;our websites and apps&rdquo;), including any content, functionality, and services offered on or through <a href='/'>www.remoteconnect.tech</a>. In these Terms, &ldquo;you&rdquo; or &ldquo;user&rdquo; refers to you as an individual using the Site. Please read them carefully as they affect your rights and liabilities under the law. If you do not agree to these Terms, please do not register for an account or use our websites and apps.
         </p>
       </div>
@@ -31,23 +31,23 @@ const TosAccordion: React.FC = () => {
         content={(
           <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Acceptance of Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Acceptance of Terms</strong><br />
                 Our websites and apps are provided to you subject to these Terms. These Terms constitute a binding agreement between you and Remoteconnect. By accessing or using our websites and apps, you agree to accept and be bound by these Terms.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Changes to Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Changes to Terms</strong><br />
                 We may update these Terms periodically to reflect changes in our services or legal requirements. The updated version will apply to you, and the current Terms will be accessible through our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Notification of said changes</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Notification of said changes</strong><br />
                 If we believe that the updates to these Terms are to impact you, we will notify you through our websites and or via email before the changes are implemented.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Continuation of Use</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Continuation of Use</strong><br />
                 If you disagree with any version of the Terms, you can discontinue the usage of our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>E. Conflicting Agreements</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Conflicting Agreements</strong><br />
                 When you use Remoteconnect or related service, such as our websites and apps, there might be additional terms or agreements that apply to specific features or services. If there is any disagreement or conflict between these general Terms of Service and any additional terms or agreements, the terms in the additional agreements will take priority.
               </p>
             </>
@@ -62,31 +62,31 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Eligibility for Registration</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Eligibility for Registration</strong><br />
                 To register an account on Remoteconnect, you must have the legal capacity to enter into a binding contract under the laws of your country of residence. This typically means you must be of legal age (usually 18 years or older) and possess the mental capacity to agree to these terms and enter into contracts.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Age Restriction</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Age Restriction</strong><br />
                 You must be at least 18 years old or the age of majority in your jurisdiction to register for an account. By registering, you confirm that you meet this age requirement.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Updating Information</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Updating Information</strong><br />
                 You must promptly update any changes to the information you provided during registration. This helps us maintain effective communication with you and manage your account appropriately.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Account Security</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Account Security</strong><br />
                 You are responsible for keeping your account credentials confidential and for all activities that occur under your account. Notify us immediately if you suspect any unauthorized use of your account or any security breaches.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>E. Compliance with Local Laws</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Compliance with Local Laws</strong><br />
                 If your country of residence has stricter age or other requirements for entering into contracts or using online services, you must comply with those laws. You are responsible for understanding and adhering to the legal requirements applicable to you.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>F. Accuracy of Information</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>F. Accuracy of Information</strong><br />
                 You are responsible for ensuring that the details you provide during registration, and at any subsequent time, are accurate and complete. It is essential that the information you submit is current and correct.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>G. Account Suspension or Termination</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>G. Account Suspension or Termination</strong><br />
                 We reserve the right to suspend or terminate your account if we believe that you have violated these Terms or if we need to enforce compliance with our policies.
               </p>
               </>
@@ -101,19 +101,19 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Password and Login Details</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Password and Login Details</strong><br />
                 When you register an account through our websites and apps, you will be required to create a password. To prevent fraud, you must keep your Login Details confidential and not disclose them to anyone. You agree to notify us immediately of any unauthorized use of your Login Details or any other security breaches.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Security Measures</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Security Measures</strong><br />
                 If we suspect a potential security breach or misuse of our websites and apps, we may require you to update your Login Details or suspend your account to protect our services and users.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Responsibility for Account Security</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Responsibility for Account Security</strong><br />
                 You are fully responsible for maintaining the confidentiality of your Login Details and for all activities conducted through your account. You can change your password at any time via the Settings section.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Liability for Security Breaches</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Liability for Security Breaches</strong><br />
                 If you fail to maintain the confidentiality of your Login Details:
               </p>
               <ul className="list-disc list-inside mb-2">
@@ -132,23 +132,23 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Intellectual Property Rights</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Intellectual Property Rights</strong><br />
                 Remoteconnect owns all intellectual property rights associated with our websites and apps. Unless stated otherwise, Remoteconnect retains all intellectual property rights in our websites and apps.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Use of Your Intellectual Property</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Use of Your Intellectual Property</strong><br />
                 We do not claim ownership of any pre-existing intellectual property you own (such as your company logo). However, by using our services, you grant us a perpetual, non-transferable, royalty-free licence to use your intellectual property in the products and services we provide (or make available) to you. If you revoke this licence, we may not be able to continue offering certain products and services to you.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Restrictions on Use of Materials</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Restrictions on Use of Materials</strong><br />
                 Unless explicitly permitted by us, the materials and content on our websites and apps are intended for your personal, non-commercial use only. You must retain all copyright and proprietary notices. Reproduction, modification, copying, distribution, or use of any materials or content for non-personal or commercial purposes is prohibited without our prior written consent.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Ownership of Work Product</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Ownership of Work Product</strong><br />
                 Unless otherwise agreed upon in writing, all intellectual property rights in the work product created by freelancers during the course of the job belong to the client upon payment. Freelancers agree to transfer all rights to the client upon full payment.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>E. Submission of Ideas and Feedback</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>E. Submission of Ideas and Feedback</strong><br />
                 We welcome your ideas and feedback regarding our websites and apps. By submitting materials or information (including suggestions for new or improved products and services) to public areas of our websites and apps (such as bulletin boards, forums, and newsgroups) or directly to us (e.g., via email), you agree that we may reproduce, distribute, transmit, create derivative works of, and publicly display such submissions. You acknowledge that you will not receive compensation for your ideas or feedback, even if we incorporate them into our websites and apps (including products and services). If required by law, you agree to formally transfer any intellectual property or other rights in your ideas and feedback to us for nominal consideration.
               </p>
             </>
@@ -498,7 +498,7 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
            <p className="text-base mb-4">
-              <strong className='text-lg lg:text-xl'>A. Payment Methods</strong><br /><br />
+              <strong className='text-lg lg:text-xl'>A. Payment Methods</strong><br />
               Clients on Remoteconnect can make payments using the following methods:
             </p>
             <ul>
@@ -508,7 +508,7 @@ const TosAccordion: React.FC = () => {
             </ul><br/>
 
             <p className="text-base mb-4">
-              <strong className='text-lg lg:text-xl'>B. Payment Processing</strong><br /><br />
+              <strong className='text-lg lg:text-xl'>B. Payment Processing</strong><br />
               All payments made by Clients for services rendered by Freelancers will first be processed through Remoteconnect. The platform will deduct its applicable service fees before transferring the remaining funds to the Freelancer.
             </p>
 
@@ -533,7 +533,7 @@ const TosAccordion: React.FC = () => {
             </div>
 
             <p className="text-base mb-4">
-              <strong className='text-lg lg:text-xl'>E. Secure Transfer Methods</strong><br/><br/>
+              <strong className='text-lg lg:text-xl'>E. Secure Transfer Methods</strong><br/>
               Remoteconnect uses secure methods for all financial transactions, including Payoneer API and Square API, to process payments. This ensures that all payments are handled safely and securely, providing peace of mind for both Clients and Freelancers.
             </p>
 
@@ -560,11 +560,11 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Compliance with Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Compliance with Terms</strong><br />
                 By using our websites and apps, you agree to adhere to all terms and conditions outlined in these Terms of Service. Any violation of these terms may result in the suspension or termination of your account.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Prohibited Communications</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Prohibited Communications</strong><br />
                 To maintain the integrity and security of our platform, you agree not to engage in any of the following activities:
               </p>
               <ol>
@@ -585,11 +585,11 @@ const TosAccordion: React.FC = () => {
               </li>
             </ol><br/>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Consequences of Violations</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Consequences of Violations</strong><br />
                 Any violation of the above policies may result in immediate account termination. Remoteconnect reserves the right to take appropriate legal action in cases of severe or repeated violations.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Monitoring and Enforcement</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Monitoring and Enforcement</strong><br />
                 Remoteconnect reserves the right to monitor communications on the platform to ensure compliance with these terms. Any suspected violations will be investigated, and appropriate action will be taken to maintain the integrity of the platform.
               </p>
               </>
@@ -603,7 +603,7 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Prohibited Activities</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Prohibited Activities</strong><br />
                 You agree not to engage in any of the following prohibited activities:
               </p>
               <ul>
@@ -633,15 +633,15 @@ const TosAccordion: React.FC = () => {
                 </li><br />
               </ul>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Account Responsibility</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Account Responsibility</strong><br />
                 You are solely responsible for all activities conducted under your account. This includes maintaining the confidentiality and security of your login credentials and ensuring that your account is not used for any prohibited activities.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>C. Action Against Violations</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>C. Action Against Violations</strong><br />
                 We reserve the right to take appropriate action against any user who violates these Terms, including but not limited to suspending or terminating their account, removing any offending content, and reporting such violations to relevant authorities.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>D. Reporting Violation</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>D. Reporting Violation</strong><br />
                 If you become aware of any violations of these Terms or other inappropriate conduct on our platforms, please contact us immediately. We will investigate and take appropriate actions as necessary to address any issues.
               </p>
               </>
@@ -656,11 +656,11 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Geographic Restrictions</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Geographic Restrictions</strong><br />
                 We do not guarantee that the materials on our websites and apps are suitable or available for use in all locations. Accessing our websites and apps from regions where the content is illegal or prohibited is not allowed. If you choose to access our services from your location, you do so at your own risk and are responsible for adhering to local laws.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Translation of Terms</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Translation of Terms</strong><br />
                 These Terms may be translated into the local language of the applicable region. In the event of any discrepancies between the English version and the translated version, the English version will take precedence. The translated version will be considered automatically adjusted to align with and reflect the English version.
               </p>
               </>
@@ -674,11 +674,11 @@ const TosAccordion: React.FC = () => {
             content={(
               <>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>A. Loss of Data Upon Account Termination</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>A. Loss of Data Upon Account Termination</strong><br />
                 Upon termination of your account, whether voluntary or involuntary, RemoteConnect may delete all data associated with your account, including but not limited to job postings, proposals, messages, and personal information. We are not liable for any loss of data, business opportunities, or other consequential damages that may result from account termination. It is your responsibility to back up any important data before account termination.
               </p>
               <p className="text-base mb-4">
-                <strong className='text-lg lg:text-xl'>B. Amendment of Data</strong><br /><br/>
+                <strong className='text-lg lg:text-xl'>B. Amendment of Data</strong><br />
                 <strong>Data Modification:</strong> Remoteconnect reserves the right to amend, modify, or update any data, including but not limited to user profiles, job postings, and other information, as deemed necessary for operational or business purposes. This includes correcting errors, updating information, or making changes in accordance with our policies and practices.<br/><br/>
                 <strong>User Responsibility:</strong> It is your responsibility to review and verify the accuracy of the data associated with your account. RemoteConnect is not responsible for any inaccuracies or outdated information that may occur as a result of data amendments.
               </p>

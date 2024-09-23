@@ -18,7 +18,7 @@ export default function Activation() {
 
         const verifyActivation = async () => {
             try {
-                const response = await axios.post(`http://127.0.0.1:8000/api/verify-activation/${activation_token}/`);
+                const response = await axios.post(`http://192.168.100.60:8000/api/verify-activation/${activation_token}/`);
                 if (response.data.success) {
                     setMessage('Your account has been activated successfully!');
                     Router.push('/login?account_activated=true');

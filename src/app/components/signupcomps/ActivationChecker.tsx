@@ -17,7 +17,7 @@ const ActivationChecker = ({ children }: { children: React.ReactNode }) => {
 
         const checkActivationTokenValidity = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/check-activation-token-validity/${activation_token}/`);
+                const response = await axios.get(`http://192.168.100.60:8000/api/check-activation-token-validity/${activation_token}/`);
                 if (response.data.valid) {
                     setIsValid(true);
                 } else {

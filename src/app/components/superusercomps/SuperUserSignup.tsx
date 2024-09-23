@@ -45,7 +45,7 @@ const SuperUserSignup = () => {
     const data = { email, username, first_name: firstName, last_name: lastName, password };
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/superusersignup/', data);
+      const response = await axios.post('http://192.168.100.60:8000/api/superusersignup/', data);
       setResponseMessage('SuperUser created successfully!');
     } catch (error) {
       setResponseMessage('Error creating SuperUser.');
